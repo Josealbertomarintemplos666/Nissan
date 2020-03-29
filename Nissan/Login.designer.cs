@@ -43,6 +43,9 @@
             this.PASS = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -212,6 +215,36 @@
             this.button1.Text = "Entrar";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(611, 369);
+            this.shapeContainer1.TabIndex = 8;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderWidth = 2;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 171;
+            this.lineShape1.X2 = 395;
+            this.lineShape1.Y1 = 192;
+            this.lineShape1.Y2 = 192;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderWidth = 2;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 169;
+            this.lineShape2.X2 = 393;
+            this.lineShape2.Y1 = 262;
+            this.lineShape2.Y2 = 262;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,6 +257,7 @@
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Opacity = 0.95D;
@@ -256,6 +290,9 @@
         private System.Windows.Forms.TextBox PASS;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
     }
 }
 
