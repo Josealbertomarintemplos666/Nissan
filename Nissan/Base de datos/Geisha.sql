@@ -2,9 +2,8 @@ create database Geisha
 use Geisha
 
 create table usuarios(
-idusuario int identity(1,1) primary key,
-usuario varchar(30) not null,
-contraseña varchar(30) not null,
+usuario varchar(30) primary key not null,
+passw varchar(30) not null,
 rol varchar(30) not null
 )
 
@@ -30,11 +29,11 @@ numero varchar(15) not null,
 
 create table ventas(
 idventa int identity(1,1) primary key,
-idusuario int not null,
+usuario varchar(30) not null,
 idvin int not null,
 idcliente int not null,
 fechapromesa date not null,
-foreign key (idusuario) references usuarios(idusuario),
+foreign key (usuario) references usuarios(usuario),
 foreign key (idvin) references datos(idvin),
 foreign key (idcliente) references clientes(idcliente)
 )

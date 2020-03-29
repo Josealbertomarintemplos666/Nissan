@@ -55,6 +55,7 @@
     <Compile Include="APV\APV.Designer.cs">
       <DependentUpon>APV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Base de datos\Conexion.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,7 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base de datos\" />
     <Folder Include="Recursos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

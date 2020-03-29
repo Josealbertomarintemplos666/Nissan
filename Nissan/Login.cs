@@ -12,6 +12,7 @@ namespace Nissan
 {
     public partial class Login : Form
     {
+        Nissan.Base_de_datos.Conexion conexion = new Base_de_datos.Conexion();
         public Login()
         {
             InitializeComponent();
@@ -83,5 +84,26 @@ namespace Nissan
         }
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Usuario.Text != "Usuario" || PASS.Text != "Contraseña")
+            {
+                conexion.abrir();
+                
+            }
+            else
+            {
+                MessageBox.Show("Coloca el nombre de usuario y la contraseña para poder entrar", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+            }
+
+            
+            
+        }
     }
 }
