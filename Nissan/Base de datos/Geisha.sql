@@ -1,78 +1,79 @@
+--Creación de la base de datos
+
 create database Geisha
 use Geisha
 
-create table usuarios(
-usuario varchar(30) primary key not null,
-passw varchar(30) not null,
-rol varchar(30) not null
-)
-
-create table datos(
-idvin int identity(1,1) primary key,
+create table Vin(
+vin  varchar(18) primary key,
 descripcion varchar(60) not null,
 cuota int not null,
 cabecera varchar(6) not null,
-vin varchar(18) not null,
 motor varchar(12) not null,
-colext varchar(3) not null
+colext varchar(3) not null,
+estatus varchar(20)check(estatus='Entregado' or estatus='En proceso' or estatus='No iniciado')default'No iniciado'not null
 )
-
-create table clientes(
-idcliente int identity(1,1) primary key,
-nombre varchar(30) not null,
-apellidop varchar(30) not null,
-apellidom varchar(30) not null,
-direccion varchar(30) not null,
-correo varchar(30) not null,
-numero varchar(15) not null,
+create table Ventanilla(
+idventanilla int identity(1,1) primary key,
+nombre varchar(50) not null
 )
-
-create table ventas(
-idventa int identity(1,1) primary key,
-usuario varchar(30) not null,
-idvin int not null,
-idcliente int not null,
-fechapromesa date not null,
-foreign key (usuario) references usuarios(usuario),
-foreign key (idvin) references datos(idvin),
-foreign key (idcliente) references clientes(idcliente)
+create table APV(
+idapv int identity(1,1) primary key,
+nombres varchar(50),
+apellido_materna varchar(50),
+apellido_paterno varchar(50)
 )
-
-create table accesorios(
+create table Tramite(
+nombre varchar(100) primary key,
+estatus varchar(20)check(estatus='Terminado' or estatus='En proceso' or estatus='No iniciado')default'No iniciado' not null,
+idventanilla int not null,
+encargado varchar(50) not null,
+fecha date not null,
+vin varchar(18) not null,
+observacion varchar(100),
+foreign key (vin) references Vin(vin)
+)
+create table Accesorios(
 idaccesorio int identity(1,1) primary key,
-idvin int not null,
+vin varchar(18) not null,
 accesorio varchar(60) not null,
-estatus varchar(30) not null,
+idventanilla int not null,
+encargado varchar(50) not null,
+estatus varchar(30) check(estatus='Terminado' or estatus='En proceso' or estatus='No iniciado') default'No iniciado' not null,
 fechapromesa date not null,
-foreign key (idvin) references datos(idvin)
+observacion varchar(100),
+foreign key (vin) references Vin(vin)
 )
-
-create table tramites(
-idtramite int identity(1,1) primary key,
-idvin int not null,
-tramite varchar(60) not null,
-estatus varchar(30) not null,
+create table Preparacion(
+preparacion varchar(60) primary key,
+vin varchar(18) not null,
+idventanilla int not null,
+encargado varchar(50) not null,
+estatus varchar(30)check(estatus='Terminado' or estatus='En proceso' or estatus='No iniciado')default'No iniciado' not null,
 fechapromesa date not null,
-foreign key (idvin) references datos(idvin)
+observacion varchar(100),
+foreign key (vin) references Vin(vin),
+foreign key (idventanilla) references Ventanilla(idventanilla)
 )
-
-create table preparacion(
-idpreparacion int identity(1,1) primary key,
-idvin int not null,
-preparacion varchar(60) not null,
-estatus varchar(30) not null,
+create table Venta(
+idventa varchar(60) primary key,
+idapv int not null,
+vin varchar(18) not null,
 fechapromesa date not null,
-foreign key (idvin) references datos(idvin)
+clente varchar(100) not null,
+foreign key (idapv) references APV(idapv),
+foreign key (vin) references Vin(vin)
 )
-create table estatusfinal(
-idestatus int identity(1,1) primary key,
-idvin int not null, 
-estatus varchar(30) not null, 
-porcentaje int not null
-foreign key (idvin) references datos(idvin)
+create table sesion(
+usuario varchar(30) primary key,
+contraseña varchar(30) not null,
+roles varchar(30) not null
 )
 
+create table acceso(
+fecha date primary key,
+usuario varchar(30) not null,
+foreign key (usuario) references sesion(Usuario)
+)
+--Store procedure´s
 
-
-insert into usuarios values('Danis','danis123','admin');
-insert into usuarios values('Omar','omar123','apv');
+--Extras

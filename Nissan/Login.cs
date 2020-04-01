@@ -94,7 +94,7 @@ namespace Nissan
             if (Usuario.Text != "Usuario" || PASS.Text != "Contraseña")
             {
                 conexion.abrir();
-                
+                ///666
             }
             else
             {
