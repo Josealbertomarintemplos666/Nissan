@@ -15,12 +15,31 @@ namespace Nissan.Administrador
         public Administrador(string x)
         {
             InitializeComponent();
+            this.Text = "ADMINISTRADOR USUARIO: "+x;
+
 
         }
 
-        private void Administrador_Load(object sender, EventArgs e)
+        
+
+        private void Maxi_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void Mini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Cerrar_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Close();
+            login.Show();
 
         }
+
+        
     }
 }

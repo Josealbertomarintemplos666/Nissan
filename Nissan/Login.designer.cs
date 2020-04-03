@@ -44,8 +44,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -176,6 +176,7 @@
             this.Usuario.TabIndex = 3;
             this.Usuario.Text = "Usuario";
             this.Usuario.Enter += new System.EventHandler(this.Usuario_Enter);
+            this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
             this.Usuario.Leave += new System.EventHandler(this.Usuario_Leave);
             // 
             // PASS
@@ -189,6 +190,7 @@
             this.PASS.TabIndex = 4;
             this.PASS.Text = "Contraseña";
             this.PASS.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.PASS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PASS_KeyPress);
             this.PASS.Leave += new System.EventHandler(this.PASS_Leave);
             // 
             // checkBox1
@@ -202,6 +204,7 @@
             this.checkBox1.Text = "Mirar contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkBox1_KeyPress);
             // 
             // button1
             // 
@@ -228,15 +231,6 @@
             this.shapeContainer1.TabIndex = 8;
             this.shapeContainer1.TabStop = false;
             // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderWidth = 2;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 170;
-            this.lineShape1.X2 = 398;
-            this.lineShape1.Y1 = 190;
-            this.lineShape1.Y2 = 190;
-            // 
             // lineShape2
             // 
             this.lineShape2.BorderWidth = 2;
@@ -245,6 +239,15 @@
             this.lineShape2.X2 = 398;
             this.lineShape2.Y1 = 260;
             this.lineShape2.Y2 = 260;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderWidth = 2;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 170;
+            this.lineShape1.X2 = 398;
+            this.lineShape1.Y1 = 190;
+            this.lineShape1.Y2 = 190;
             // 
             // Login
             // 
@@ -264,7 +267,6 @@
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

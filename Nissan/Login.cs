@@ -25,7 +25,9 @@ namespace Nissan
 
         private void Cerrar_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
             this.Close();
+            conexion.cerrar();
         }
 
         private void Mini_Click(object sender, EventArgs e)
@@ -91,7 +93,6 @@ namespace Nissan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             if (Usuario.Text != "Usuario" || PASS.Text != "Contraseña")
             {
                 conexion.abrir();
@@ -123,14 +124,13 @@ namespace Nissan
                         Nissan.Gerente_de_ventas.Gerente_de_ventas gerente_ = new Gerente_de_ventas.Gerente_de_ventas(Usuario.Text);
                         gerente_.Show();
                     }
-                    
-
                 }
                 else
                 {
                     MessageBox.Show("Usuario y Contraseña incorrectos","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     Usuario.Text = "Usuario";
                     PASS.Text = "Contraseña";
+                    PASS.UseSystemPasswordChar = false;
                     conexion.cerrar();
                 }
             }
@@ -139,6 +139,165 @@ namespace Nissan
                 MessageBox.Show("Coloca el nombre de usuario y la contraseña para poder entrar", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
             } 
+        }
+
+        private void PASS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (Usuario.Text != "Usuario" || PASS.Text != "Contraseña")
+                {
+                    conexion.abrir();
+                    if (conexion.Login(Usuario.Text, PASS.Text) != "falso")
+                    {
+
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Administrador")
+                        {
+
+                            this.Hide();
+                            Nissan.Administrador.Administrador admin = new Administrador.Administrador(Usuario.Text);
+                            admin.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Ventanilla unica")
+                        {
+                            this.Hide();
+                            Nissan.Ventanilla_unica.Ventanilla_unica vent = new Ventanilla_unica.Ventanilla_unica(Usuario.Text);
+                            vent.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "apv")
+                        {
+                            this.Hide();
+                            Nissan.APV.APV aPV = new APV.APV(Usuario.Text);
+                            aPV.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "gerente de ventas")
+                        {
+                            this.Hide();
+                            Nissan.Gerente_de_ventas.Gerente_de_ventas gerente_ = new Gerente_de_ventas.Gerente_de_ventas(Usuario.Text);
+                            gerente_.Show();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario y Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Usuario.Text = "Usuario";
+                        PASS.Text = "Contraseña";
+                        PASS.UseSystemPasswordChar = false;
+                        conexion.cerrar();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Coloca el nombre de usuario y la contraseña para poder entrar", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+        }
+
+        private void Usuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (Usuario.Text != "Usuario" || PASS.Text != "Contraseña")
+                {
+                    conexion.abrir();
+                    if (conexion.Login(Usuario.Text, PASS.Text) != "falso")
+                    {
+
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Administrador")
+                        {
+
+                            this.Hide();
+                            Nissan.Administrador.Administrador admin = new Administrador.Administrador(Usuario.Text);
+                            admin.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Ventanilla unica")
+                        {
+                            this.Hide();
+                            Nissan.Ventanilla_unica.Ventanilla_unica vent = new Ventanilla_unica.Ventanilla_unica(Usuario.Text);
+                            vent.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "apv")
+                        {
+                            this.Hide();
+                            Nissan.APV.APV aPV = new APV.APV(Usuario.Text);
+                            aPV.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "gerente de ventas")
+                        {
+                            this.Hide();
+                            Nissan.Gerente_de_ventas.Gerente_de_ventas gerente_ = new Gerente_de_ventas.Gerente_de_ventas(Usuario.Text);
+                            gerente_.Show();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario y Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Usuario.Text = "Usuario";
+                        PASS.Text = "Contraseña";
+                        PASS.UseSystemPasswordChar = false;
+                        conexion.cerrar();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Coloca el nombre de usuario y la contraseña para poder entrar", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+        }
+
+        private void checkBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (Usuario.Text != "Usuario" || PASS.Text != "Contraseña")
+                {
+                    conexion.abrir();
+                    if (conexion.Login(Usuario.Text, PASS.Text) != "falso")
+                    {
+
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Administrador")
+                        {
+
+                            this.Hide();
+                            Nissan.Administrador.Administrador admin = new Administrador.Administrador(Usuario.Text);
+                            admin.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Ventanilla unica")
+                        {
+                            this.Hide();
+                            Nissan.Ventanilla_unica.Ventanilla_unica vent = new Ventanilla_unica.Ventanilla_unica(Usuario.Text);
+                            vent.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "apv")
+                        {
+                            this.Hide();
+                            Nissan.APV.APV aPV = new APV.APV(Usuario.Text);
+                            aPV.Show();
+                        }
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "gerente de ventas")
+                        {
+                            this.Hide();
+                            Nissan.Gerente_de_ventas.Gerente_de_ventas gerente_ = new Gerente_de_ventas.Gerente_de_ventas(Usuario.Text);
+                            gerente_.Show();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario y Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Usuario.Text = "Usuario";
+                        PASS.Text = "Contraseña";
+                        PASS.UseSystemPasswordChar = false;
+                        conexion.cerrar();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Coloca el nombre de usuario y la contraseña para poder entrar", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
         }
     }
 

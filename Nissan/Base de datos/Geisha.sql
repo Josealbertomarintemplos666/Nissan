@@ -76,6 +76,18 @@ fecha date primary key,
 usuario varchar(30) not null,
 foreign key (usuario) references sesion(Usuario)
 )
+
+--Inserts
+
+insert sesion values('juan','1234','Administrador')
+insert sesion values('dani','1234','Ventanilla unica')
+insert sesion values('omar','1234','apv')
+insert sesion values('ivan','1234','gerente de ventas')
+--insert sesion values('jose','1234','Mecannico')
+
 --Store procedure´s
 
+
 --Extras
+select * from sesion
+select * from sesion where usuario='juan' and contraseña='1234'
