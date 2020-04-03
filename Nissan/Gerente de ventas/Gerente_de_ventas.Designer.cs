@@ -1,6 +1,6 @@
-﻿namespace Nissan.Ventanilla_unica
+﻿namespace Nissan.Gerente_de_ventas
 {
-    partial class Ventanilla_unica
+    partial class Gerente_de_ventas
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Ventanilla_unica
+            // Gerente_de_ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Ventanilla_unica";
-            this.Text = "Ventanilla_unica";
-            this.Load += new System.EventHandler(this.Ventanilla_unica_Load);
+            this.Name = "Gerente_de_ventas";
+            this.Text = "Gerente_de_ventas";
+            this.Load += new System.EventHandler(this.Gerente_de_ventas_Load);
             this.ResumeLayout(false);
 
         }

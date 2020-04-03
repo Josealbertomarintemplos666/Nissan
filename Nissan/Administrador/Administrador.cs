@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Nissan.APV
+namespace Nissan.Administrador
 {
-    public partial class APV : Form
+    public partial class Administrador : Form
     {
-        public APV(String x)
+        public Administrador(string x)
         {
             InitializeComponent();
+
         }
 
-        private void APV_Load(object sender, EventArgs e)
+        private void Administrador_Load(object sender, EventArgs e)
         {
 
         }

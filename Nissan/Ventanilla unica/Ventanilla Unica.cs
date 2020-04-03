@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Nissan.Ventanilla_unica
 {
-    public partial class Form1 : Form
+    public partial class Ventanilla_unica : Form
     {
-        public Form1()
+        public Ventanilla_unica(String x)
         {
             InitializeComponent();
+        }
+
+        private void Ventanilla_unica_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

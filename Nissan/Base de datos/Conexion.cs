@@ -21,11 +21,13 @@ namespace Nissan.Base_de_datos
         public DataSet ds;
         public DataRow dr;
         public SqlDataReader drr;
+        public DataTable dt;
 
         public Conexion()
         {
             conectarbd.ConnectionString = Conect;
         }
+
 
         public void abrir()
         {
@@ -42,5 +44,24 @@ namespace Nissan.Base_de_datos
         {
             conectarbd.Close();
         }
+
+        public String Login(String usuario, String contra)
+        {
+            cmd = new SqlCommand("select usuario, roles from sesion where usuario=@us and contraseña=@pas",conectarbd);
+            cmd.Parameters.AddWithValue("us",usuario);
+            cmd.Parameters.AddWithValue("pas", contra);
+            SqlDataAdapter ss = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            ss.Fill(dt);
+            if (dt.Rows.Count == 1)
+            {
+                return dt.Rows[0][1].ToString();
+            }
+            else
+            {
+                return "falso";
+            }
+        }
+
     }
 }

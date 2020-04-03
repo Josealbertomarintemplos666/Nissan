@@ -30,7 +30,8 @@ encargado varchar(50) not null,
 fecha date not null,
 vin varchar(18) not null,
 observacion varchar(100),
-foreign key (vin) references Vin(vin)
+foreign key (vin) references Vin(vin),
+foreign key (idventanilla) references Ventanilla(idventanilla)
 )
 create table Accesorios(
 idaccesorio int identity(1,1) primary key,
@@ -41,7 +42,8 @@ encargado varchar(50) not null,
 estatus varchar(30) check(estatus='Terminado' or estatus='En proceso' or estatus='No iniciado') default'No iniciado' not null,
 fechapromesa date not null,
 observacion varchar(100),
-foreign key (vin) references Vin(vin)
+foreign key (vin) references Vin(vin),
+foreign key (idventanilla) references Ventanilla(idventanilla)
 )
 create table Preparacion(
 preparacion varchar(60) primary key,

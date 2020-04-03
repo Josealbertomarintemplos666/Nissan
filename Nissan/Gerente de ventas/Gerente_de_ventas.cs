@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Nissan.APV
+namespace Nissan.Gerente_de_ventas
 {
-    public partial class APV : Form
+    public partial class Gerente_de_ventas : Form
     {
-        public APV(String x)
+        public Gerente_de_ventas(String x)
         {
             InitializeComponent();
         }
 
-        private void APV_Load(object sender, EventArgs e)
+        private void Gerente_de_ventas_Load(object sender, EventArgs e)
         {
 
         }

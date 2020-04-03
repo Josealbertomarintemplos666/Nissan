@@ -1,6 +1,6 @@
-﻿namespace Nissan.Ventanilla_unica
+﻿namespace Nissan.Administrador
 {
-    partial class Ventanilla_unica
+    partial class Administrador
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Ventanilla_unica
+            // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Ventanilla_unica";
-            this.Text = "Ventanilla_unica";
-            this.Load += new System.EventHandler(this.Ventanilla_unica_Load);
+            this.Name = "Administrador";
+            this.Text = "Administrador";
+            this.Load += new System.EventHandler(this.Administrador_Load);
             this.ResumeLayout(false);
 
         }
