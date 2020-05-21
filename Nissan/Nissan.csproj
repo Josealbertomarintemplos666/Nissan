@@ -68,6 +68,12 @@
     <Compile Include="BuscarVin.Designer.cs">
       <DependentUpon>BuscarVin.cs</DependentUpon>
     </Compile>
+    <Compile Include="CargaDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargaDatos.Designer.cs">
+      <DependentUpon>CargaDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gerente de ventas\Gerente_de_ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarVin.resx">
       <DependentUpon>BuscarVin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargaDatos.resx">
+      <DependentUpon>CargaDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente de ventas\Gerente_de_ventas.resx">
       <DependentUpon>Gerente_de_ventas.cs</DependentUpon>
