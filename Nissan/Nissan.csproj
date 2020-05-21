@@ -104,6 +104,7 @@
     <Compile Include="Ventanilla unica\Ventanilla unica.Designer.cs">
       <DependentUpon>Ventanilla unica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vin.cs" />
     <EmbeddedResource Include="Administrador\Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
