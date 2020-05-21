@@ -62,6 +62,12 @@
       <DependentUpon>APV.cs</DependentUpon>
     </Compile>
     <Compile Include="Base de datos\Conexion.cs" />
+    <Compile Include="BuscarVin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarVin.Designer.cs">
+      <DependentUpon>BuscarVin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gerente de ventas\Gerente_de_ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="APV\APV.resx">
       <DependentUpon>APV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarVin.resx">
+      <DependentUpon>BuscarVin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente de ventas\Gerente_de_ventas.resx">
       <DependentUpon>Gerente_de_ventas.cs</DependentUpon>

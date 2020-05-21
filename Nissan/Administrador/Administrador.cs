@@ -40,6 +40,16 @@ namespace Nissan.Administrador
 
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            BuscarVin BV = new BuscarVin();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
+        }
     }
 }

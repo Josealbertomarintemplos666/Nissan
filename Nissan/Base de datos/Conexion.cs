@@ -63,5 +63,12 @@ namespace Nissan.Base_de_datos
             }
         }
 
+        public void ListaVin(DataSet dataSet)
+        {
+            cmd = new SqlCommand("select vin from Vin", conectarbd);
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dataSet, "Vin");
+            da.Dispose();
+        }
     }
 }
