@@ -21,5 +21,12 @@ namespace Nissan.Gerente_de_ventas
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Nissan.Login login = new Login();
+            login.Show();
+        }
     }
 }
