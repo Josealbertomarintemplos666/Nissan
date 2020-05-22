@@ -21,81 +21,7 @@ namespace Nissan
             InitializeComponent();
         }
         DataTableCollection tableCollection;
-        private void cboTabla_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DataTable dt = tableCollection[cboTabla.SelectedItem.ToString()];
-            dataGridView1.DataSource = dt;
-            if(dt!=null)
-            {
-                List<Vin> vins = new List<Vin>();
-                for(int i = 0; i < dt.Rows.Count; i++)
-                {
-                    Vin vin = new Vin();
-                    vin.vin = dt.Rows[i]["vin"].ToString();
-                    vin.descripcion = dt.Rows[i]["descripcion"].ToString();
-                    vin.cuota = dt.Rows[i]["cuota"].ToString();
-                    vin.cabecera = dt.Rows[i]["cabecera"].ToString();
-                    vin.motor = dt.Rows[i]["motor"].ToString();
-                    vin.colext = dt.Rows[i]["colext"].ToString();
-                    vins.Add(vin);
-                }
-                vinBindingSource.DataSource = vins;
-            }
-        }
-        
-
-        private void btnBrowse_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog() {Filter="Excel 97-2003 Workbook|*.xls|Excel Workbook|*.xlsx"})
-            {
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    txtFilename.Text = openFileDialog.FileName;
-                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
-                    {
-                        using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
-                        {
-                            DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
-                            {
-                                ConfigureDataTable=(_)=> new ExcelDataTableConfiguration()
-                                {
-                                    UseHeaderRow=true
-                                }
-                            });
-                            tableCollection = result.Tables;
-                            cboTabla.Items.Clear();
-                            foreach (DataTable table in tableCollection)
-                            cboTabla.Items.Add(table.TableName);
-
-                        }
-                    }
-                }
-            }
-        }
-
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Nissan.Base_de_datos.Conexion Conect = new Base_de_datos.Conexion();
-                //string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
-               // string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
-                DapperPlusManager.Entity<Vin>().Table("Vin");
-                List<Vin> vins = vinBindingSource.DataSource as List<Vin>;
-                if(vins != null)
-                {
-                    using(IDbConnection db=new SqlConnection(Conect.Conect))
-                    {
-                        db.BulkInsert(vins);
-                    }
-                }
-                MessageBox.Show("Inserción Correcta");
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+     
 
         private void CargaDatos_Load(object sender, EventArgs e)
         {
@@ -112,6 +38,82 @@ namespace Nissan
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnBrowse_Click_1(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel 97-2003 Workbook|*.xls|Excel Workbook|*.xlsx" })
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    txtFilename.Text = openFileDialog.FileName;
+                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+                        {
+                            DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
+                            {
+                                ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+                                {
+                                    UseHeaderRow = true
+                                }
+                            });
+                            tableCollection = result.Tables;
+                            cboTabla.Items.Clear();
+                            foreach (DataTable table in tableCollection)
+                                cboTabla.Items.Add(table.TableName);
+
+                        }
+                    }
+                }
+            }
+
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Nissan.Base_de_datos.Conexion Conect = new Base_de_datos.Conexion();
+                //string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
+                // string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
+                DapperPlusManager.Entity<Vin>().Table("Vin");
+                List<Vin> vins = vinBindingSource.DataSource as List<Vin>;
+                if (vins != null)
+                {
+                    using (IDbConnection db = new SqlConnection(Conect.Conect))
+                    {
+                        db.BulkInsert(vins);
+                    }
+                }
+                MessageBox.Show("Inserción Correcta");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cboTabla_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            DataTable dt = tableCollection[cboTabla.SelectedItem.ToString()];
+            dataGridView1.DataSource = dt;
+            if (dt != null)
+            {
+                List<Vin> vins = new List<Vin>();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    Vin vin = new Vin();
+                    vin.vin = dt.Rows[i]["vin"].ToString();
+                    vin.descripcion = dt.Rows[i]["descripcion"].ToString();
+                    vin.cuota = dt.Rows[i]["cuota"].ToString();
+                    vin.cabecera = dt.Rows[i]["cabecera"].ToString();
+                    vin.motor = dt.Rows[i]["motor"].ToString();
+                    vin.colext = dt.Rows[i]["colext"].ToString();
+                    vins.Add(vin);
+                }
+                vinBindingSource.DataSource = vins;
+            }
         }
     }
 }
