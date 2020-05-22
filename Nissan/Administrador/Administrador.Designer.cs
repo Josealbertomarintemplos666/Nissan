@@ -39,6 +39,7 @@
             this.Maxi = new System.Windows.Forms.Button();
             this.Cerrar = new System.Windows.Forms.Button();
             this.Contenedor = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button2);
@@ -180,6 +182,20 @@
             this.Contenedor.Size = new System.Drawing.Size(1200, 576);
             this.Contenedor.TabIndex = 1;
             // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(522, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(174, 42);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -215,5 +231,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel Contenedor;
+        private System.Windows.Forms.Button button4;
     }
 }
