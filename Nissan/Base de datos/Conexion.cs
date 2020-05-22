@@ -14,7 +14,7 @@ namespace Nissan.Base_de_datos
 
     class Conexion
     {
-        string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
+        public string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
         public SqlConnection conectarbd = new SqlConnection();
         public SqlCommand cmd = new SqlCommand();
         public SqlDataAdapter da;

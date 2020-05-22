@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Nissan {
+namespace Nissan.Administrador {
     
     
     /// <summary>
@@ -699,7 +699,7 @@ namespace Nissan {
         }
     }
 }
-namespace Nissan.GeishaDataSetTableAdapters {
+namespace Nissan.Administrador.GeishaDataSetTableAdapters {
     
     
     /// <summary>

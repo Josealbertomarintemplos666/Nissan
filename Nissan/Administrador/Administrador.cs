@@ -63,5 +63,10 @@ namespace Nissan.Administrador
             this.Contenedor.Tag = BV;
             BV.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

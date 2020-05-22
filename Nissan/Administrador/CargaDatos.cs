@@ -20,11 +20,11 @@ namespace Nissan
         {
             InitializeComponent();
         }
-
+        DataTableCollection tableCollection;
         private void cboTabla_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[cboTabla.SelectedItem.ToString()];
-            //dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dt;
             if(dt!=null)
             {
                 List<Vin> vins = new List<Vin>();
@@ -42,7 +42,7 @@ namespace Nissan
                 vinBindingSource.DataSource = vins;
             }
         }
-        DataTableCollection tableCollection;
+        
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -65,7 +65,7 @@ namespace Nissan
                             tableCollection = result.Tables;
                             cboTabla.Items.Clear();
                             foreach (DataTable table in tableCollection)
-                                cboTabla.Items.Add(table.TableName);
+                            cboTabla.Items.Add(table.TableName);
 
                         }
                     }
@@ -77,13 +77,14 @@ namespace Nissan
         {
             try
             {
-                string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
+                Nissan.Base_de_datos.Conexion Conect = new Base_de_datos.Conexion();
+                //string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
                // string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
                 DapperPlusManager.Entity<Vin>().Table("Vin");
                 List<Vin> vins = vinBindingSource.DataSource as List<Vin>;
                 if(vins != null)
                 {
-                    using(IDbConnection db=new SqlConnection(Conect))
+                    using(IDbConnection db=new SqlConnection(Conect.Conect))
                     {
                         db.BulkInsert(vins);
                     }
@@ -99,7 +100,12 @@ namespace Nissan
         private void CargaDatos_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'geishaDataSet.Vin' Puede moverla o quitarla según sea necesario.
-            this.vinTableAdapter.Fill(this.geishaDataSet.Vin);
+            //dataGridView1.DataSource=(this.vinTableAdapter.Fill(this.geishaDataSet.Vin));
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
