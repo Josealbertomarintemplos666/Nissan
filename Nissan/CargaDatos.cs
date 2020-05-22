@@ -77,12 +77,13 @@ namespace Nissan
         {
             try
             {
-                string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
+                string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
+               // string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
                 DapperPlusManager.Entity<Vin>().Table("Vin");
                 List<Vin> vins = vinBindingSource.DataSource as List<Vin>;
                 if(vins != null)
                 {
-                    using(IDbConnection db=new SqlConnection(connectionString))
+                    using(IDbConnection db=new SqlConnection(Conect))
                     {
                         db.BulkInsert(vins);
                     }

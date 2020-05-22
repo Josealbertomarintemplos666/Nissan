@@ -41,11 +41,6 @@
             this.geishaDataSet = new Nissan.GeishaDataSet();
             this.vinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vinTableAdapter = new Nissan.GeishaDataSetTableAdapters.VinTableAdapter();
-            this.vinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).BeginInit();
@@ -121,15 +116,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.vinDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn,
-            this.cuotaDataGridViewTextBoxColumn,
-            this.motorDataGridViewTextBoxColumn,
-            this.colextDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.vinBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(55, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(558, 240);
@@ -158,36 +145,6 @@
             // vinTableAdapter
             // 
             this.vinTableAdapter.ClearBeforeFill = true;
-            // 
-            // vinDataGridViewTextBoxColumn
-            // 
-            this.vinDataGridViewTextBoxColumn.DataPropertyName = "vin";
-            this.vinDataGridViewTextBoxColumn.HeaderText = "vin";
-            this.vinDataGridViewTextBoxColumn.Name = "vinDataGridViewTextBoxColumn";
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            // 
-            // cuotaDataGridViewTextBoxColumn
-            // 
-            this.cuotaDataGridViewTextBoxColumn.DataPropertyName = "cuota";
-            this.cuotaDataGridViewTextBoxColumn.HeaderText = "cuota";
-            this.cuotaDataGridViewTextBoxColumn.Name = "cuotaDataGridViewTextBoxColumn";
-            // 
-            // motorDataGridViewTextBoxColumn
-            // 
-            this.motorDataGridViewTextBoxColumn.DataPropertyName = "motor";
-            this.motorDataGridViewTextBoxColumn.HeaderText = "motor";
-            this.motorDataGridViewTextBoxColumn.Name = "motorDataGridViewTextBoxColumn";
-            // 
-            // colextDataGridViewTextBoxColumn
-            // 
-            this.colextDataGridViewTextBoxColumn.DataPropertyName = "colext";
-            this.colextDataGridViewTextBoxColumn.HeaderText = "colext";
-            this.colextDataGridViewTextBoxColumn.Name = "colextDataGridViewTextBoxColumn";
             // 
             // CargaDatos
             // 
@@ -223,10 +180,5 @@
         private GeishaDataSet geishaDataSet;
         private System.Windows.Forms.BindingSource vinBindingSource;
         private GeishaDataSetTableAdapters.VinTableAdapter vinTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vinDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cuotaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn motorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colextDataGridViewTextBoxColumn;
     }
 }
