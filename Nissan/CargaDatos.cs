@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Z.Dapper.Plus;
 
 namespace Nissan
 {
@@ -22,8 +24,23 @@ namespace Nissan
         private void cboTabla_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[cboTabla.SelectedItem.ToString()];
-            dataGridView1.DataSource = dt;
-
+            //dataGridView1.DataSource = dt;
+            if(dt!=null)
+            {
+                List<Vin> vins = new List<Vin>();
+                for(int i = 0; i < dt.Rows.Count; i++)
+                {
+                    Vin vin = new Vin();
+                    vin.vin = dt.Rows[i]["vin"].ToString();
+                    vin.descripcion = dt.Rows[i]["descripcion"].ToString();
+                    vin.cuota = dt.Rows[i]["cuota"].ToString();
+                    vin.cabecera = dt.Rows[i]["cabecera"].ToString();
+                    vin.motor = dt.Rows[i]["motor"].ToString();
+                    vin.colext = dt.Rows[i]["colext"].ToString();
+                    vins.Add(vin);
+                }
+                vinBindingSource.DataSource = vins;
+            }
         }
         DataTableCollection tableCollection;
 
@@ -58,6 +75,30 @@ namespace Nissan
 
         private void btnImport_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
+                DapperPlusManager.Entity<Vin>().Table("Vin");
+                List<Vin> vins = vinBindingSource.DataSource as List<Vin>;
+                if(vins != null)
+                {
+                    using(IDbConnection db=new SqlConnection(connectionString))
+                    {
+                        db.BulkInsert(vins);
+                    }
+                }
+                MessageBox.Show("Inserción Correcta");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CargaDatos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'geishaDataSet.Vin' Puede moverla o quitarla según sea necesario.
+            this.vinTableAdapter.Fill(this.geishaDataSet.Vin);
 
         }
     }

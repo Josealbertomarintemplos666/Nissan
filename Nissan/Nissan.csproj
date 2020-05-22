@@ -84,6 +84,11 @@
     <Compile Include="CargaDatos.Designer.cs">
       <DependentUpon>CargaDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeishaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeishaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Gerente de ventas\Gerente_de_ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +140,17 @@
     <EmbeddedResource Include="Ventanilla unica\Ventanilla unica.resx">
       <DependentUpon>Ventanilla unica.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="GeishaDataSet.xsc">
+      <DependentUpon>GeishaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeishaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GeishaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GeishaDataSet.xss">
+      <DependentUpon>GeishaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

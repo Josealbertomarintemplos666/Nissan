@@ -28,17 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboTabla = new System.Windows.Forms.ComboBox();
-            this.txtFilename = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnImport = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFilename = new System.Windows.Forms.TextBox();
+            this.cboTabla = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.geishaDataSet = new Nissan.GeishaDataSet();
+            this.vinBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vinTableAdapter = new Nissan.GeishaDataSetTableAdapters.VinTableAdapter();
+            this.vinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vinBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,32 +73,32 @@
             this.panel2.Size = new System.Drawing.Size(942, 636);
             this.panel2.TabIndex = 1;
             // 
-            // btnBrowse
+            // btnImport
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(526, 279);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowse.TabIndex = 0;
-            this.btnBrowse.Text = "..";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.btnImport.Location = new System.Drawing.Point(289, 329);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(72, 25);
+            this.btnImport.TabIndex = 6;
+            this.btnImport.Text = "Importar";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
-            // dataGridView1
+            // label2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 24);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(558, 240);
-            this.dataGridView1.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(56, 329);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Tabla:";
             // 
-            // label1
+            // txtFilename
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 284);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Documento:";
+            this.txtFilename.Location = new System.Drawing.Point(127, 281);
+            this.txtFilename.Name = "txtFilename";
+            this.txtFilename.ReadOnly = true;
+            this.txtFilename.Size = new System.Drawing.Size(393, 20);
+            this.txtFilename.TabIndex = 4;
             // 
             // cboTabla
             // 
@@ -99,32 +110,84 @@
             this.cboTabla.TabIndex = 3;
             this.cboTabla.SelectedIndexChanged += new System.EventHandler(this.cboTabla_SelectedIndexChanged);
             // 
-            // txtFilename
+            // label1
             // 
-            this.txtFilename.Location = new System.Drawing.Point(127, 281);
-            this.txtFilename.Name = "txtFilename";
-            this.txtFilename.ReadOnly = true;
-            this.txtFilename.Size = new System.Drawing.Size(393, 20);
-            this.txtFilename.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(56, 284);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Documento:";
             // 
-            // label2
+            // dataGridView1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 329);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tabla:";
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.vinDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.cuotaDataGridViewTextBoxColumn,
+            this.motorDataGridViewTextBoxColumn,
+            this.colextDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.vinBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(55, 24);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(558, 240);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // btnImport
+            // btnBrowse
             // 
-            this.btnImport.Location = new System.Drawing.Point(289, 329);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(72, 25);
-            this.btnImport.TabIndex = 6;
-            this.btnImport.Text = "Importar";
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btnBrowse.Location = new System.Drawing.Point(526, 279);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 0;
+            this.btnBrowse.Text = "..";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // geishaDataSet
+            // 
+            this.geishaDataSet.DataSetName = "GeishaDataSet";
+            this.geishaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vinBindingSource
+            // 
+            this.vinBindingSource.DataMember = "Vin";
+            this.vinBindingSource.DataSource = this.geishaDataSet;
+            // 
+            // vinTableAdapter
+            // 
+            this.vinTableAdapter.ClearBeforeFill = true;
+            // 
+            // vinDataGridViewTextBoxColumn
+            // 
+            this.vinDataGridViewTextBoxColumn.DataPropertyName = "vin";
+            this.vinDataGridViewTextBoxColumn.HeaderText = "vin";
+            this.vinDataGridViewTextBoxColumn.Name = "vinDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // cuotaDataGridViewTextBoxColumn
+            // 
+            this.cuotaDataGridViewTextBoxColumn.DataPropertyName = "cuota";
+            this.cuotaDataGridViewTextBoxColumn.HeaderText = "cuota";
+            this.cuotaDataGridViewTextBoxColumn.Name = "cuotaDataGridViewTextBoxColumn";
+            // 
+            // motorDataGridViewTextBoxColumn
+            // 
+            this.motorDataGridViewTextBoxColumn.DataPropertyName = "motor";
+            this.motorDataGridViewTextBoxColumn.HeaderText = "motor";
+            this.motorDataGridViewTextBoxColumn.Name = "motorDataGridViewTextBoxColumn";
+            // 
+            // colextDataGridViewTextBoxColumn
+            // 
+            this.colextDataGridViewTextBoxColumn.DataPropertyName = "colext";
+            this.colextDataGridViewTextBoxColumn.HeaderText = "colext";
+            this.colextDataGridViewTextBoxColumn.Name = "colextDataGridViewTextBoxColumn";
             // 
             // CargaDatos
             // 
@@ -136,9 +199,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CargaDatos";
             this.Text = "CargaDatos";
+            this.Load += new System.EventHandler(this.CargaDatos_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vinBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +220,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Button btnImport;
+        private GeishaDataSet geishaDataSet;
+        private System.Windows.Forms.BindingSource vinBindingSource;
+        private GeishaDataSetTableAdapters.VinTableAdapter vinTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuotaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn motorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colextDataGridViewTextBoxColumn;
     }
 }
