@@ -29,116 +29,53 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.CargarDatos = new System.Windows.Forms.Button();
             this.Mini = new System.Windows.Forms.Button();
             this.Maxi = new System.Windows.Forms.Button();
             this.Cerrar = new System.Windows.Forms.Button();
+            this.Head = new System.Windows.Forms.Panel();
+            this.Logo = new System.Windows.Forms.Panel();
+            this.Info = new System.Windows.Forms.Panel();
+            this.Menu = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.SubmenuCD = new System.Windows.Forms.Panel();
+            this.CargarVin = new System.Windows.Forms.Button();
+            this.CargarApv = new System.Windows.Forms.Button();
+            this.MostrarInformacion = new System.Windows.Forms.Button();
+            this.Usuarios = new System.Windows.Forms.Button();
+            this.SubmenuU = new System.Windows.Forms.Panel();
+            this.NuevoUser = new System.Windows.Forms.Button();
+            this.ConfigurarUsuario = new System.Windows.Forms.Button();
+            this.Nombre = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Contenedor = new System.Windows.Forms.Panel();
+            this.Head.SuspendLayout();
+            this.Info.SuspendLayout();
+            this.Menu.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.SubmenuCD.SuspendLayout();
+            this.SubmenuU.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // CargarDatos
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 82);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 31);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1200, 42);
-            this.panel3.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(522, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 42);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(348, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(174, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Usuarios";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Carga de datos";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.Mini);
-            this.panel2.Controls.Add(this.Maxi);
-            this.panel2.Controls.Add(this.Cerrar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1200, 31);
-            this.panel2.TabIndex = 0;
+            this.CargarDatos.BackColor = System.Drawing.Color.Transparent;
+            this.CargarDatos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CargarDatos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.CargarDatos.FlatAppearance.BorderSize = 2;
+            this.CargarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CargarDatos.ForeColor = System.Drawing.Color.Black;
+            this.CargarDatos.Image = ((System.Drawing.Image)(resources.GetObject("CargarDatos.Image")));
+            this.CargarDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CargarDatos.Location = new System.Drawing.Point(0, 0);
+            this.CargarDatos.Name = "CargarDatos";
+            this.CargarDatos.Size = new System.Drawing.Size(192, 56);
+            this.CargarDatos.TabIndex = 2;
+            this.CargarDatos.Text = "CARGAR DATOS";
+            this.CargarDatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CargarDatos.UseVisualStyleBackColor = false;
+            this.CargarDatos.Click += new System.EventHandler(this.button2_Click);
             // 
             // Mini
             // 
@@ -150,9 +87,9 @@
             this.Mini.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Mini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Mini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mini.Location = new System.Drawing.Point(1107, 0);
+            this.Mini.Location = new System.Drawing.Point(1065, 0);
             this.Mini.Name = "Mini";
-            this.Mini.Size = new System.Drawing.Size(31, 31);
+            this.Mini.Size = new System.Drawing.Size(31, 30);
             this.Mini.TabIndex = 2;
             this.Mini.UseVisualStyleBackColor = false;
             this.Mini.Click += new System.EventHandler(this.Mini_Click);
@@ -167,9 +104,9 @@
             this.Maxi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Maxi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Maxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Maxi.Location = new System.Drawing.Point(1138, 0);
+            this.Maxi.Location = new System.Drawing.Point(1096, 0);
             this.Maxi.Name = "Maxi";
-            this.Maxi.Size = new System.Drawing.Size(31, 31);
+            this.Maxi.Size = new System.Drawing.Size(31, 30);
             this.Maxi.TabIndex = 1;
             this.Maxi.UseVisualStyleBackColor = false;
             this.Maxi.Click += new System.EventHandler(this.Maxi_Click);
@@ -184,56 +121,294 @@
             this.Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cerrar.Location = new System.Drawing.Point(1169, 0);
+            this.Cerrar.Location = new System.Drawing.Point(1127, 0);
             this.Cerrar.Name = "Cerrar";
-            this.Cerrar.Size = new System.Drawing.Size(31, 31);
+            this.Cerrar.Size = new System.Drawing.Size(31, 30);
             this.Cerrar.TabIndex = 0;
             this.Cerrar.UseVisualStyleBackColor = false;
             this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
+            // Head
+            // 
+            this.Head.AutoSize = true;
+            this.Head.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
+            this.Head.Controls.Add(this.Menu);
+            this.Head.Controls.Add(this.Info);
+            this.Head.Controls.Add(this.Logo);
+            this.Head.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Head.Location = new System.Drawing.Point(0, 0);
+            this.Head.Name = "Head";
+            this.Head.Size = new System.Drawing.Size(1366, 196);
+            this.Head.TabIndex = 2;
+            // 
+            // Logo
+            // 
+            this.Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
+            this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
+            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Padding = new System.Windows.Forms.Padding(5);
+            this.Logo.Size = new System.Drawing.Size(208, 196);
+            this.Logo.TabIndex = 0;
+            // 
+            // Info
+            // 
+            this.Info.BackColor = System.Drawing.Color.Black;
+            this.Info.Controls.Add(this.Mini);
+            this.Info.Controls.Add(this.Nombre);
+            this.Info.Controls.Add(this.Maxi);
+            this.Info.Controls.Add(this.Cerrar);
+            this.Info.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Info.Location = new System.Drawing.Point(208, 0);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(1158, 30);
+            this.Info.TabIndex = 1;
+            // 
+            // Menu
+            // 
+            this.Menu.AutoSize = true;
+            this.Menu.BackColor = System.Drawing.Color.White;
+            this.Menu.Controls.Add(this.SubmenuU);
+            this.Menu.Controls.Add(this.SubmenuCD);
+            this.Menu.Controls.Add(this.panel4);
+            this.Menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Menu.Location = new System.Drawing.Point(208, 30);
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(1158, 166);
+            this.Menu.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.Usuarios);
+            this.panel4.Controls.Add(this.MostrarInformacion);
+            this.panel4.Controls.Add(this.CargarDatos);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1158, 56);
+            this.panel4.TabIndex = 0;
+            // 
+            // SubmenuCD
+            // 
+            this.SubmenuCD.BackColor = System.Drawing.Color.White;
+            this.SubmenuCD.Controls.Add(this.CargarApv);
+            this.SubmenuCD.Controls.Add(this.CargarVin);
+            this.SubmenuCD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SubmenuCD.Location = new System.Drawing.Point(0, 56);
+            this.SubmenuCD.Name = "SubmenuCD";
+            this.SubmenuCD.Size = new System.Drawing.Size(1158, 55);
+            this.SubmenuCD.TabIndex = 1;
+            this.SubmenuCD.Visible = false;
+            // 
+            // CargarVin
+            // 
+            this.CargarVin.BackColor = System.Drawing.Color.Transparent;
+            this.CargarVin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CargarVin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.CargarVin.FlatAppearance.BorderSize = 2;
+            this.CargarVin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CargarVin.ForeColor = System.Drawing.Color.Black;
+            this.CargarVin.Image = ((System.Drawing.Image)(resources.GetObject("CargarVin.Image")));
+            this.CargarVin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CargarVin.Location = new System.Drawing.Point(0, 0);
+            this.CargarVin.Name = "CargarVin";
+            this.CargarVin.Size = new System.Drawing.Size(171, 55);
+            this.CargarVin.TabIndex = 3;
+            this.CargarVin.Text = "Cargar Vin´s";
+            this.CargarVin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CargarVin.UseVisualStyleBackColor = false;
+            this.CargarVin.Click += new System.EventHandler(this.CargarVin_Click);
+            // 
+            // CargarApv
+            // 
+            this.CargarApv.BackColor = System.Drawing.Color.Transparent;
+            this.CargarApv.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CargarApv.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.CargarApv.FlatAppearance.BorderSize = 2;
+            this.CargarApv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CargarApv.ForeColor = System.Drawing.Color.Black;
+            this.CargarApv.Image = ((System.Drawing.Image)(resources.GetObject("CargarApv.Image")));
+            this.CargarApv.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CargarApv.Location = new System.Drawing.Point(171, 0);
+            this.CargarApv.Name = "CargarApv";
+            this.CargarApv.Size = new System.Drawing.Size(158, 55);
+            this.CargarApv.TabIndex = 4;
+            this.CargarApv.Text = "Cargar APV";
+            this.CargarApv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CargarApv.UseVisualStyleBackColor = false;
+            this.CargarApv.Click += new System.EventHandler(this.CargarApv_Click);
+            // 
+            // MostrarInformacion
+            // 
+            this.MostrarInformacion.BackColor = System.Drawing.Color.Transparent;
+            this.MostrarInformacion.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MostrarInformacion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.MostrarInformacion.FlatAppearance.BorderSize = 2;
+            this.MostrarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MostrarInformacion.ForeColor = System.Drawing.Color.Black;
+            this.MostrarInformacion.Image = ((System.Drawing.Image)(resources.GetObject("MostrarInformacion.Image")));
+            this.MostrarInformacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MostrarInformacion.Location = new System.Drawing.Point(192, 0);
+            this.MostrarInformacion.Name = "MostrarInformacion";
+            this.MostrarInformacion.Size = new System.Drawing.Size(264, 56);
+            this.MostrarInformacion.TabIndex = 3;
+            this.MostrarInformacion.Text = "MOSTRAR INFORMACIÓN";
+            this.MostrarInformacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MostrarInformacion.UseVisualStyleBackColor = false;
+            this.MostrarInformacion.Click += new System.EventHandler(this.MostrarInformacion_Click);
+            // 
+            // Usuarios
+            // 
+            this.Usuarios.BackColor = System.Drawing.Color.Transparent;
+            this.Usuarios.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Usuarios.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Usuarios.FlatAppearance.BorderSize = 2;
+            this.Usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Usuarios.ForeColor = System.Drawing.Color.Black;
+            this.Usuarios.Image = ((System.Drawing.Image)(resources.GetObject("Usuarios.Image")));
+            this.Usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Usuarios.Location = new System.Drawing.Point(456, 0);
+            this.Usuarios.Name = "Usuarios";
+            this.Usuarios.Size = new System.Drawing.Size(141, 56);
+            this.Usuarios.TabIndex = 4;
+            this.Usuarios.Text = "USUARIOS";
+            this.Usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Usuarios.UseVisualStyleBackColor = false;
+            this.Usuarios.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // SubmenuU
+            // 
+            this.SubmenuU.Controls.Add(this.ConfigurarUsuario);
+            this.SubmenuU.Controls.Add(this.NuevoUser);
+            this.SubmenuU.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SubmenuU.Location = new System.Drawing.Point(0, 111);
+            this.SubmenuU.Name = "SubmenuU";
+            this.SubmenuU.Size = new System.Drawing.Size(1158, 55);
+            this.SubmenuU.TabIndex = 2;
+            this.SubmenuU.Visible = false;
+            // 
+            // NuevoUser
+            // 
+            this.NuevoUser.BackColor = System.Drawing.Color.Transparent;
+            this.NuevoUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NuevoUser.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.NuevoUser.FlatAppearance.BorderSize = 2;
+            this.NuevoUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NuevoUser.ForeColor = System.Drawing.Color.Black;
+            this.NuevoUser.Image = ((System.Drawing.Image)(resources.GetObject("NuevoUser.Image")));
+            this.NuevoUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NuevoUser.Location = new System.Drawing.Point(0, 0);
+            this.NuevoUser.Name = "NuevoUser";
+            this.NuevoUser.Size = new System.Drawing.Size(171, 55);
+            this.NuevoUser.TabIndex = 4;
+            this.NuevoUser.Text = "Nuevo Usuario";
+            this.NuevoUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NuevoUser.UseVisualStyleBackColor = false;
+            this.NuevoUser.Click += new System.EventHandler(this.NuevoUser_Click);
+            // 
+            // ConfigurarUsuario
+            // 
+            this.ConfigurarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.ConfigurarUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ConfigurarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ConfigurarUsuario.FlatAppearance.BorderSize = 2;
+            this.ConfigurarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfigurarUsuario.ForeColor = System.Drawing.Color.Black;
+            this.ConfigurarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("ConfigurarUsuario.Image")));
+            this.ConfigurarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ConfigurarUsuario.Location = new System.Drawing.Point(171, 0);
+            this.ConfigurarUsuario.Name = "ConfigurarUsuario";
+            this.ConfigurarUsuario.Size = new System.Drawing.Size(190, 55);
+            this.ConfigurarUsuario.TabIndex = 5;
+            this.ConfigurarUsuario.Text = "Modificar Usuario";
+            this.ConfigurarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ConfigurarUsuario.UseVisualStyleBackColor = false;
+            this.ConfigurarUsuario.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSize = true;
+            this.Nombre.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Nombre.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre.ForeColor = System.Drawing.Color.White;
+            this.Nombre.Location = new System.Drawing.Point(0, 0);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(167, 25);
+            this.Nombre.TabIndex = 0;
+            this.Nombre.Text = "Administrador: ";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Contenedor);
+            this.panel1.Controls.Add(this.Head);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1366, 688);
+            this.panel1.TabIndex = 3;
+            // 
             // Contenedor
             // 
+            this.Contenedor.AutoSize = true;
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Contenedor.Location = new System.Drawing.Point(0, 82);
+            this.Contenedor.Location = new System.Drawing.Point(0, 196);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(1200, 576);
-            this.Contenedor.TabIndex = 1;
+            this.Contenedor.Size = new System.Drawing.Size(1366, 492);
+            this.Contenedor.TabIndex = 5;
             // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 658);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(1366, 688);
             this.ControlBox = false;
-            this.Controls.Add(this.Contenedor);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Administrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administrador";
+            this.Text = "Nissan";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Administrador_Load);
+            this.Head.ResumeLayout(false);
+            this.Head.PerformLayout();
+            this.Info.ResumeLayout(false);
+            this.Info.PerformLayout();
+            this.Menu.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.SubmenuCD.ResumeLayout(false);
+            this.SubmenuU.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Mini;
         private System.Windows.Forms.Button Maxi;
         private System.Windows.Forms.Button Cerrar;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CargarDatos;
+        private System.Windows.Forms.Panel Head;
+        private System.Windows.Forms.Panel Menu;
+        private System.Windows.Forms.Panel SubmenuU;
+        private System.Windows.Forms.Button ConfigurarUsuario;
+        private System.Windows.Forms.Button NuevoUser;
+        private System.Windows.Forms.Panel SubmenuCD;
+        private System.Windows.Forms.Button CargarApv;
+        private System.Windows.Forms.Button CargarVin;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button Usuarios;
+        private System.Windows.Forms.Button MostrarInformacion;
+        private System.Windows.Forms.Panel Info;
+        private System.Windows.Forms.Panel Logo;
+        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Contenedor;
-        private System.Windows.Forms.Button button4;
     }
 }

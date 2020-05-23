@@ -65,7 +65,7 @@ namespace Nissan.Base_de_datos
 
         public void ListaVin(DataSet dataSet)
         {
-            cmd = new SqlCommand("select vin from Vin", conectarbd);
+            cmd = new SqlCommand("select vin Vins from Vin group by vin", conectarbd);
             da = new SqlDataAdapter(cmd);
             da.Fill(dataSet, "Vin");
             da.Dispose();

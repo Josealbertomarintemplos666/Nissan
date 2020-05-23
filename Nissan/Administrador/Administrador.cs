@@ -15,7 +15,8 @@ namespace Nissan.Administrador
         public Administrador(string x)
         {
             InitializeComponent();
-            this.Text = "ADMINISTRADOR USUARIO: "+x;
+            Nombre.Text = "ADMINISTRADOR: " + x;
+            dis();
 
 
         }
@@ -54,31 +55,107 @@ namespace Nissan.Administrador
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            muestrasub(SubmenuCD);
+          
+
+        }
+
+        private void Administrador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dis()
+        {
+            SubmenuCD.Visible = false;
+            SubmenuU.Visible = false;
+
+        }
+        private void ocultasub()
+        {
+            if (SubmenuCD.Visible == true)
+                SubmenuCD.Visible = false;
+            if (SubmenuU.Visible == true)
+                SubmenuU.Visible = false;
+        }
+
+        private void muestrasub(Panel submenu)
+        {
+            if(submenu.Visible== false)
+            {
+                ocultasub();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            muestrasub(SubmenuU);
+        }
+
+        private void CargarVin_Click(object sender, EventArgs e)
+        {
+            ocultasub();
+            
+            if (this.Contenedor.Controls.Count > 0)
+                  this.Contenedor.Controls.RemoveAt(0);
+              CargaDatos BV = new CargaDatos();
+              BV.TopLevel = false;
+              BV.StartPosition = FormStartPosition.CenterScreen;
+              this.Contenedor.Controls.Add(BV);
+              this.Contenedor.Tag = BV;
+              BV.Show();
+
+
+            
+        }
+
+        private void CargarApv_Click(object sender, EventArgs e)
+        {
+            ocultasub();
+           
             if (this.Contenedor.Controls.Count > 0)
                 this.Contenedor.Controls.RemoveAt(0);
-            CargaDatos BV = new CargaDatos();
+            Nissan.Administrador.CargaAPV BV = new Nissan.Administrador.CargaAPV();
             BV.TopLevel = false;
             BV.StartPosition = FormStartPosition.CenterScreen;
             this.Contenedor.Controls.Add(BV);
             this.Contenedor.Tag = BV;
             BV.Show();
+
+            
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void NuevoUser_Click(object sender, EventArgs e)
         {
-
+            ocultasub();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
+            ocultasub();
+        }
+
+        private void MostrarInformacion_Click(object sender, EventArgs e)
+        {
+            ocultasub();
             if (this.Contenedor.Controls.Count > 0)
                 this.Contenedor.Controls.RemoveAt(0);
-            CargaAPV BV = new CargaAPV();
+            BuscarVin BV = new BuscarVin();
             BV.TopLevel = false;
             BV.StartPosition = FormStartPosition.CenterScreen;
             this.Contenedor.Controls.Add(BV);
             this.Contenedor.Tag = BV;
             BV.Show();
+
+
+            
         }
     }
 }

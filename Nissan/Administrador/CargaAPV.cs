@@ -32,7 +32,9 @@ namespace Nissan.Administrador
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    textBox1.Text = openFileDialog.FileName;
+                    label1.Text = openFileDialog.FileName;
+                    //textBox1.Text = openFileDialog.FileName;
+                   
                     using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
                     {
                         using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
@@ -53,6 +55,12 @@ namespace Nissan.Administrador
                     }
                 }
             }
+
+            panel5.Visible = true;
+            label1.Visible = true;
+
+           
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,6 +84,8 @@ namespace Nissan.Administrador
                 
               
             }
+
+            button2.Visible = true;
         }
 
         private void CargaAPV_Load(object sender, EventArgs e)
@@ -102,6 +112,12 @@ namespace Nissan.Administrador
                     }
                 }
                 MessageBox.Show("Inserción Correcta");
+                panel5.Visible = false;
+                label1.Text = "";
+                label1.Visible = false;
+                button2.Visible = false;
+                dataGridView1.Columns.Clear();
+                
             }
             catch (Exception ex)
             {

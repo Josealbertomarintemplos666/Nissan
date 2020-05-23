@@ -71,6 +71,18 @@ namespace Nissan
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (Rvin.Checked == true) { 
+            VentanaVin n = new VentanaVin(Vins.CurrentCell.Value.ToString());
+            n.TopLevel = false;
+            n.Dock = DockStyle.Top;
+            this.padre.Controls.Add(n);
+            this.padre.Tag = n;
+            n.Show();
+            }
+            if (RAPV.Checked == true)
+            {
+                textBox1.Text = "APV";
+            }
 
         }
 
@@ -112,5 +124,7 @@ namespace Nissan
                 Vins.DataSource = filtro;
              }
         }
+
+        
     }
 }
