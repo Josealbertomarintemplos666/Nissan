@@ -32,5 +32,15 @@ namespace Nissan.Properties {
                 return ((string)(this["GeishaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LATITUDE5540;Initial Catalog=Geisha;Integrated Security=True")]
+        public string GeishaConnectionString1 {
+            get {
+                return ((string)(this["GeishaConnectionString1"]));
+            }
+        }
     }
 }

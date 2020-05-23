@@ -71,13 +71,13 @@
     <Compile Include="Administrador\CargaAPV.Designer.cs">
       <DependentUpon>CargaAPV.cs</DependentUpon>
     </Compile>
-    <Compile Include="apv.cs" />
     <Compile Include="APV\APV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="APV\APV.Designer.cs">
       <DependentUpon>APV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Asesor.cs" />
     <Compile Include="Base de datos\Conexion.cs" />
     <Compile Include="BuscarVin.cs">
       <SubType>Form</SubType>
@@ -92,6 +92,11 @@
       <DependentUpon>CargaDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador\GeishaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeishaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GeishaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GeishaDataSet.xsd</DependentUpon>
@@ -159,6 +164,17 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Administrador\GeishaDataSet.xss">
+      <DependentUpon>GeishaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeishaDataSet.xsc">
+      <DependentUpon>GeishaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeishaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GeishaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GeishaDataSet.xss">
       <DependentUpon>GeishaDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />

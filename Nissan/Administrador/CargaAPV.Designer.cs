@@ -28,17 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.geishaDataSet = new Nissan.GeishaDataSet();
+            this.asesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asesorTableAdapter = new Nissan.GeishaDataSetTableAdapters.AsesorTableAdapter();
+            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asesorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,8 +59,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombresDataGridViewTextBoxColumn,
+            this.agenteDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.asesorBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(188, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1012, 295);
@@ -72,6 +85,43 @@
             this.panel2.Size = new System.Drawing.Size(1012, 216);
             this.panel2.TabIndex = 1;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(108, 83);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(393, 21);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(108, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(393, 20);
+            this.textBox1.TabIndex = 10;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(531, 80);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 27);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Importar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(531, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 27);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -90,44 +140,35 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(10, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 21);
+            this.label2.Size = new System.Drawing.Size(49, 21);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Tabla:";
+            this.label2.Text = "Hoja:";
             // 
-            // button1
+            // geishaDataSet
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(531, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 27);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.geishaDataSet.DataSetName = "GeishaDataSet";
+            this.geishaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button2
+            // asesorBindingSource
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(531, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 27);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Importar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.asesorBindingSource.DataMember = "Asesor";
+            this.asesorBindingSource.DataSource = this.geishaDataSet;
             // 
-            // textBox1
+            // asesorTableAdapter
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(393, 20);
-            this.textBox1.TabIndex = 10;
+            this.asesorTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
+            // nombresDataGridViewTextBoxColumn
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 83);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(393, 21);
-            this.comboBox1.TabIndex = 11;
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "nombres";
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "nombres";
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            // 
+            // agenteDataGridViewTextBoxColumn
+            // 
+            this.agenteDataGridViewTextBoxColumn.DataPropertyName = "agente";
+            this.agenteDataGridViewTextBoxColumn.HeaderText = "agente";
+            this.agenteDataGridViewTextBoxColumn.Name = "agenteDataGridViewTextBoxColumn";
             // 
             // CargaAPV
             // 
@@ -140,9 +181,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CargaAPV";
             this.Text = "CargaAPV";
+            this.Load += new System.EventHandler(this.CargaAPV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asesorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +202,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private Nissan.GeishaDataSet geishaDataSet;
+        private System.Windows.Forms.BindingSource asesorBindingSource;
+        private Nissan.GeishaDataSetTableAdapters.AsesorTableAdapter asesorTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn agenteDataGridViewTextBoxColumn;
     }
 }

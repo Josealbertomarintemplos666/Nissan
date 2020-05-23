@@ -145,9 +145,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 21);
+            this.label2.Size = new System.Drawing.Size(49, 21);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Tabla:";
+            this.label2.Text = "Hoja:";
             // 
             // btnBrowse
             // 

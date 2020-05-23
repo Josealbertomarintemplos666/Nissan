@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Nissan
 {
-    public class apv
+    public class Asesor
     {
-        public String nombres { get; set; }
+        public String nombres { get; set;}
         public String agente { get; set; }
-    }
+
+     }
 }
