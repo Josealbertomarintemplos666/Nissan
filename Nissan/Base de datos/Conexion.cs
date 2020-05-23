@@ -70,5 +70,12 @@ namespace Nissan.Base_de_datos
             da.Fill(dataSet, "Vin");
             da.Dispose();
         }
+        public void ListaAPV(DataSet dataSet)
+        {
+            cmd = new SqlCommand("select nombres Nombre from Asesor group by nombres", conectarbd);
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dataSet, "Asesor");
+            da.Dispose();
+        }
     }
 }
