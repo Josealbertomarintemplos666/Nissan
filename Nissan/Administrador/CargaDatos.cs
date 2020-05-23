@@ -37,13 +37,15 @@ namespace Nissan
 
         }
 
-        private void btnBrowse_Click_1(object sender, EventArgs e)
+  
+
+        private void button1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel 97-2003 Workbook|*.xls|Excel Workbook|*.xlsx" })
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    txtFilename.Text = openFileDialog.FileName;
+                    label4.Text = openFileDialog.FileName;
                     using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
                     {
                         using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
@@ -56,18 +58,19 @@ namespace Nissan
                                 }
                             });
                             tableCollection = result.Tables;
-                            cboTabla.Items.Clear();
+                            comboBox1.Items.Clear();
                             foreach (DataTable table in tableCollection)
-                                cboTabla.Items.Add(table.TableName);
+                                comboBox1.Items.Add(table.TableName);
 
                         }
                     }
                 }
             }
-
+            panel5.Visible = true;
+            label4.Visible = true;
         }
 
-        private void btnImport_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -91,9 +94,9 @@ namespace Nissan
             }
         }
 
-        private void cboTabla_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt = tableCollection[cboTabla.SelectedItem.ToString()];
+            DataTable dt = tableCollection[comboBox1.SelectedItem.ToString()];
             dataGridView1.DataSource = dt;
             if (dt != null)
             {
@@ -111,6 +114,7 @@ namespace Nissan
                 }
                 vinBindingSource.DataSource = vins;
             }
+            button2.Visible = true;
         }
     }
 }

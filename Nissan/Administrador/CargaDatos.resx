@@ -117,6 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAH9SURBVGhD7ZlNTgJBEIWJutCNUVcaI7jiDHIW3ejGBWcw0US8ASITifEweARv4NYr6HvdNToQ
+        gemarmZhf8lLenrq74WGDNDKZGzZgo6hDtSOINY5gjahJHD4t6+IFEXxiZrXUBITbekbHdS+gMxNmBkg
+        qH/l29hhaoCgh+lxMjdA0MfsOCUxQNDL5DglM0DQL/pxMjOA2gNZzoD9qMfJ0sApdCmXM2A/2nGyNHDG
+        +tCNbM2A/SjHKel7YB70P4c23CRK1mpAHjv4OKNmrQYIZ/Cj6MgGmsIZ/Cg6GhlA/isllyo4AwfRojaA
+        3ALaFb3IdjCcAVKjMoC8EbTvKngOoEe5HQTy0hpAzhiqDl/CvbGE1QY56Qwg/gnikVkE700kvBaIT2MA
+        sUNoz2Uth8dpKGkrQay9AcTxzNcZvoSxI0lfCuJsDSBmCh266F92IP4kU8I196owZyplFoKYJK/AA7Tt
+        MvwRuYdO3JWH6wHEe4Sxf34fmAdxyd4DdxCf8Z/lmj9ilXRkb8I1dMvrOiA2jQHS7/c/ZDnf+KdOt9t9
+        l2UtmOtL6AgyUIW5voQjVp1gsgEhG9Dyrw30IH7+Uz3ZDoYzQGrUBmLBGfwoOrKBpnAGP4qObKApnMGP
+        oiMbaApn8KPoiP43awjsLTOoif1Hd4jYk72r3+wymbi0Wt9kvPYC+fFoQwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAONSURBVGhD7Zndiw1hHMfX+ztRFELe8nqrDlIkNxtJWos7txtJ2VodrAus9oSNtHVIlOSIC5EL
+        XFBcUP4BF66VUv4CPt85v5meM7tn1nnOzOyq+dS3nX1m5vt7npnf8zLP6SgoKChwmYrmomVoZUzLkc7p
+        mgnDDLQBdaEr6Bn6+KcJnPtk1wygbrQRzUS5MhkpcC96ZXXzBo/XqA9tRvLOlNXoqsVOHbwH0Vo0CaWK
+        nkxXuVz+YbEyo1qt/iLWETRFgdNAle8x/9wg5kmUSiM0alwz31wh7u6gBikwG1XMNzeI+QRNUwV8UfqE
+        HUpj+IB55wYxNad4ofH5DDoQ/FdHb+KGeecC8TQBtowqHw2XHO8PSuvklk7E8Uoh3XDBPCIoc9+E0imz
+        +SCEGHuCaC2iUWdEAwTl8TeRWTrhrWHUe2ZWCvWbVwOUZ5pOlUrlJ56HkOYAZYP34i+pEZmkk3zQepka
+        O9HS+qEfWm1mmk7c9wGdRaq4mzJL0AOk9Vci8XW7qxVIxvcsXgOUu42Yg1SRt+irXRLR2dn5nfL36DHq
+        RweRluJ6g3EWoDu6j7+rgpJmBO5tgIWbTpr09NYWIjXefRiL0Sw01vpmK3pq9vLXvc2x69oCm311N2+U
+        OmrwabOMoGzCNkCVVp7r3ttmNQLOJc/Edp03WLj9YD7ahbYj9Z0wffSRsg3tRSeQRptHpVLpm9mMCteo
+        v4w5E4dBRlOrnfi6nUoF/LxmYhd1yIvm1wDl8coP2alUwK/tDxpNZJfNrwHK3crPQ6k9eRtutcuhGXi6
+        /W0ZVf6SeTZAebzyN+1U2+A1hNRfQkqo5ZlYLf6XtBHddsobPN4gpYv6mpsyGqEeojFn4jhqQJ/5R1AW
+        r7xQ7m9BR5H2ie4iVeiz3RZB2Rf0Dt1H59BxpElLy5A4i9Cw3Zc8Ezch6YMmiXAm1lJA43c4mulYZfJN
+        2vPROS0vahZasXW/FwoW/6TUOK+lbtqbT/LSkN1r9Y6gzLsBwv2oV4cNVpy1Wu03x8PoMFJgn50Dpao+
+        2PWAbjXbNLNr2iZxkuLcc3QeafjTGt6dhUOtQzuQGq0+UNMunFmMCte0va0i9KQGzTNXiJvKxpbSaDy2
+        FntQKluLQkbH9L1q/pmRxeauyxqU2T4p3pltr7sopTYhzZ4vLLY3eLxEp8xT3rni+xOTvgfG7SemJDRi
+        6SP9v/mRr6CgYFzp6PgLfFu8NatII1QAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="geishaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
