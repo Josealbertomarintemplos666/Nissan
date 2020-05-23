@@ -34,27 +34,27 @@
             this.Maxi = new System.Windows.Forms.Button();
             this.Cerrar = new System.Windows.Forms.Button();
             this.Head = new System.Windows.Forms.Panel();
-            this.Logo = new System.Windows.Forms.Panel();
-            this.Info = new System.Windows.Forms.Panel();
             this.Menu = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.SubmenuCD = new System.Windows.Forms.Panel();
-            this.CargarVin = new System.Windows.Forms.Button();
-            this.CargarApv = new System.Windows.Forms.Button();
-            this.MostrarInformacion = new System.Windows.Forms.Button();
-            this.Usuarios = new System.Windows.Forms.Button();
             this.SubmenuU = new System.Windows.Forms.Panel();
-            this.NuevoUser = new System.Windows.Forms.Button();
             this.ConfigurarUsuario = new System.Windows.Forms.Button();
+            this.NuevoUser = new System.Windows.Forms.Button();
+            this.SubmenuCD = new System.Windows.Forms.Panel();
+            this.CargarApv = new System.Windows.Forms.Button();
+            this.CargarVin = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Usuarios = new System.Windows.Forms.Button();
+            this.MostrarInformacion = new System.Windows.Forms.Button();
+            this.Info = new System.Windows.Forms.Panel();
             this.Nombre = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Contenedor = new System.Windows.Forms.Panel();
             this.Head.SuspendLayout();
-            this.Info.SuspendLayout();
             this.Menu.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.SubmenuCD.SuspendLayout();
             this.SubmenuU.SuspendLayout();
+            this.SubmenuCD.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.Info.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,31 +141,6 @@
             this.Head.Size = new System.Drawing.Size(1366, 196);
             this.Head.TabIndex = 2;
             // 
-            // Logo
-            // 
-            this.Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
-            this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
-            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Padding = new System.Windows.Forms.Padding(5);
-            this.Logo.Size = new System.Drawing.Size(208, 196);
-            this.Logo.TabIndex = 0;
-            // 
-            // Info
-            // 
-            this.Info.BackColor = System.Drawing.Color.Black;
-            this.Info.Controls.Add(this.Mini);
-            this.Info.Controls.Add(this.Nombre);
-            this.Info.Controls.Add(this.Maxi);
-            this.Info.Controls.Add(this.Cerrar);
-            this.Info.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Info.Location = new System.Drawing.Point(208, 0);
-            this.Info.Name = "Info";
-            this.Info.Size = new System.Drawing.Size(1158, 30);
-            this.Info.TabIndex = 1;
-            // 
             // Menu
             // 
             this.Menu.AutoSize = true;
@@ -179,106 +154,6 @@
             this.Menu.Size = new System.Drawing.Size(1158, 166);
             this.Menu.TabIndex = 2;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.Usuarios);
-            this.panel4.Controls.Add(this.MostrarInformacion);
-            this.panel4.Controls.Add(this.CargarDatos);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1158, 56);
-            this.panel4.TabIndex = 0;
-            // 
-            // SubmenuCD
-            // 
-            this.SubmenuCD.BackColor = System.Drawing.Color.White;
-            this.SubmenuCD.Controls.Add(this.CargarApv);
-            this.SubmenuCD.Controls.Add(this.CargarVin);
-            this.SubmenuCD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SubmenuCD.Location = new System.Drawing.Point(0, 56);
-            this.SubmenuCD.Name = "SubmenuCD";
-            this.SubmenuCD.Size = new System.Drawing.Size(1158, 55);
-            this.SubmenuCD.TabIndex = 1;
-            this.SubmenuCD.Visible = false;
-            // 
-            // CargarVin
-            // 
-            this.CargarVin.BackColor = System.Drawing.Color.Transparent;
-            this.CargarVin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.CargarVin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.CargarVin.FlatAppearance.BorderSize = 2;
-            this.CargarVin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CargarVin.ForeColor = System.Drawing.Color.Black;
-            this.CargarVin.Image = ((System.Drawing.Image)(resources.GetObject("CargarVin.Image")));
-            this.CargarVin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CargarVin.Location = new System.Drawing.Point(0, 0);
-            this.CargarVin.Name = "CargarVin";
-            this.CargarVin.Size = new System.Drawing.Size(171, 55);
-            this.CargarVin.TabIndex = 3;
-            this.CargarVin.Text = "Cargar Vin´s";
-            this.CargarVin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CargarVin.UseVisualStyleBackColor = false;
-            this.CargarVin.Click += new System.EventHandler(this.CargarVin_Click);
-            // 
-            // CargarApv
-            // 
-            this.CargarApv.BackColor = System.Drawing.Color.Transparent;
-            this.CargarApv.Dock = System.Windows.Forms.DockStyle.Left;
-            this.CargarApv.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.CargarApv.FlatAppearance.BorderSize = 2;
-            this.CargarApv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CargarApv.ForeColor = System.Drawing.Color.Black;
-            this.CargarApv.Image = ((System.Drawing.Image)(resources.GetObject("CargarApv.Image")));
-            this.CargarApv.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CargarApv.Location = new System.Drawing.Point(171, 0);
-            this.CargarApv.Name = "CargarApv";
-            this.CargarApv.Size = new System.Drawing.Size(158, 55);
-            this.CargarApv.TabIndex = 4;
-            this.CargarApv.Text = "Cargar APV";
-            this.CargarApv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CargarApv.UseVisualStyleBackColor = false;
-            this.CargarApv.Click += new System.EventHandler(this.CargarApv_Click);
-            // 
-            // MostrarInformacion
-            // 
-            this.MostrarInformacion.BackColor = System.Drawing.Color.Transparent;
-            this.MostrarInformacion.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MostrarInformacion.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.MostrarInformacion.FlatAppearance.BorderSize = 2;
-            this.MostrarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MostrarInformacion.ForeColor = System.Drawing.Color.Black;
-            this.MostrarInformacion.Image = ((System.Drawing.Image)(resources.GetObject("MostrarInformacion.Image")));
-            this.MostrarInformacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MostrarInformacion.Location = new System.Drawing.Point(192, 0);
-            this.MostrarInformacion.Name = "MostrarInformacion";
-            this.MostrarInformacion.Size = new System.Drawing.Size(264, 56);
-            this.MostrarInformacion.TabIndex = 3;
-            this.MostrarInformacion.Text = "MOSTRAR INFORMACIÓN";
-            this.MostrarInformacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MostrarInformacion.UseVisualStyleBackColor = false;
-            this.MostrarInformacion.Click += new System.EventHandler(this.MostrarInformacion_Click);
-            // 
-            // Usuarios
-            // 
-            this.Usuarios.BackColor = System.Drawing.Color.Transparent;
-            this.Usuarios.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Usuarios.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Usuarios.FlatAppearance.BorderSize = 2;
-            this.Usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Usuarios.ForeColor = System.Drawing.Color.Black;
-            this.Usuarios.Image = ((System.Drawing.Image)(resources.GetObject("Usuarios.Image")));
-            this.Usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Usuarios.Location = new System.Drawing.Point(456, 0);
-            this.Usuarios.Name = "Usuarios";
-            this.Usuarios.Size = new System.Drawing.Size(141, 56);
-            this.Usuarios.TabIndex = 4;
-            this.Usuarios.Text = "USUARIOS";
-            this.Usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Usuarios.UseVisualStyleBackColor = false;
-            this.Usuarios.Click += new System.EventHandler(this.button8_Click);
-            // 
             // SubmenuU
             // 
             this.SubmenuU.Controls.Add(this.ConfigurarUsuario);
@@ -289,25 +164,6 @@
             this.SubmenuU.Size = new System.Drawing.Size(1158, 55);
             this.SubmenuU.TabIndex = 2;
             this.SubmenuU.Visible = false;
-            // 
-            // NuevoUser
-            // 
-            this.NuevoUser.BackColor = System.Drawing.Color.Transparent;
-            this.NuevoUser.Dock = System.Windows.Forms.DockStyle.Left;
-            this.NuevoUser.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.NuevoUser.FlatAppearance.BorderSize = 2;
-            this.NuevoUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NuevoUser.ForeColor = System.Drawing.Color.Black;
-            this.NuevoUser.Image = ((System.Drawing.Image)(resources.GetObject("NuevoUser.Image")));
-            this.NuevoUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.NuevoUser.Location = new System.Drawing.Point(0, 0);
-            this.NuevoUser.Name = "NuevoUser";
-            this.NuevoUser.Size = new System.Drawing.Size(171, 55);
-            this.NuevoUser.TabIndex = 4;
-            this.NuevoUser.Text = "Nuevo Usuario";
-            this.NuevoUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoUser.UseVisualStyleBackColor = false;
-            this.NuevoUser.Click += new System.EventHandler(this.NuevoUser_Click);
             // 
             // ConfigurarUsuario
             // 
@@ -328,6 +184,138 @@
             this.ConfigurarUsuario.UseVisualStyleBackColor = false;
             this.ConfigurarUsuario.Click += new System.EventHandler(this.button5_Click);
             // 
+            // NuevoUser
+            // 
+            this.NuevoUser.BackColor = System.Drawing.Color.Transparent;
+            this.NuevoUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NuevoUser.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.NuevoUser.FlatAppearance.BorderSize = 2;
+            this.NuevoUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NuevoUser.ForeColor = System.Drawing.Color.Black;
+            this.NuevoUser.Image = ((System.Drawing.Image)(resources.GetObject("NuevoUser.Image")));
+            this.NuevoUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NuevoUser.Location = new System.Drawing.Point(0, 0);
+            this.NuevoUser.Name = "NuevoUser";
+            this.NuevoUser.Size = new System.Drawing.Size(171, 55);
+            this.NuevoUser.TabIndex = 4;
+            this.NuevoUser.Text = "Nuevo Usuario";
+            this.NuevoUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NuevoUser.UseVisualStyleBackColor = false;
+            this.NuevoUser.Click += new System.EventHandler(this.NuevoUser_Click);
+            // 
+            // SubmenuCD
+            // 
+            this.SubmenuCD.BackColor = System.Drawing.Color.White;
+            this.SubmenuCD.Controls.Add(this.CargarApv);
+            this.SubmenuCD.Controls.Add(this.CargarVin);
+            this.SubmenuCD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SubmenuCD.Location = new System.Drawing.Point(0, 56);
+            this.SubmenuCD.Name = "SubmenuCD";
+            this.SubmenuCD.Size = new System.Drawing.Size(1158, 55);
+            this.SubmenuCD.TabIndex = 1;
+            this.SubmenuCD.Visible = false;
+            // 
+            // CargarApv
+            // 
+            this.CargarApv.BackColor = System.Drawing.Color.Transparent;
+            this.CargarApv.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CargarApv.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.CargarApv.FlatAppearance.BorderSize = 2;
+            this.CargarApv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CargarApv.ForeColor = System.Drawing.Color.Black;
+            this.CargarApv.Image = ((System.Drawing.Image)(resources.GetObject("CargarApv.Image")));
+            this.CargarApv.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CargarApv.Location = new System.Drawing.Point(171, 0);
+            this.CargarApv.Name = "CargarApv";
+            this.CargarApv.Size = new System.Drawing.Size(158, 55);
+            this.CargarApv.TabIndex = 4;
+            this.CargarApv.Text = "Cargar APV";
+            this.CargarApv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CargarApv.UseVisualStyleBackColor = false;
+            this.CargarApv.Click += new System.EventHandler(this.CargarApv_Click);
+            // 
+            // CargarVin
+            // 
+            this.CargarVin.BackColor = System.Drawing.Color.Transparent;
+            this.CargarVin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CargarVin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.CargarVin.FlatAppearance.BorderSize = 2;
+            this.CargarVin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CargarVin.ForeColor = System.Drawing.Color.Black;
+            this.CargarVin.Image = ((System.Drawing.Image)(resources.GetObject("CargarVin.Image")));
+            this.CargarVin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CargarVin.Location = new System.Drawing.Point(0, 0);
+            this.CargarVin.Name = "CargarVin";
+            this.CargarVin.Size = new System.Drawing.Size(171, 55);
+            this.CargarVin.TabIndex = 3;
+            this.CargarVin.Text = "Cargar Vin´s";
+            this.CargarVin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CargarVin.UseVisualStyleBackColor = false;
+            this.CargarVin.Click += new System.EventHandler(this.CargarVin_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.Usuarios);
+            this.panel4.Controls.Add(this.MostrarInformacion);
+            this.panel4.Controls.Add(this.CargarDatos);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1158, 56);
+            this.panel4.TabIndex = 0;
+            // 
+            // Usuarios
+            // 
+            this.Usuarios.BackColor = System.Drawing.Color.Transparent;
+            this.Usuarios.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Usuarios.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Usuarios.FlatAppearance.BorderSize = 2;
+            this.Usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Usuarios.ForeColor = System.Drawing.Color.Black;
+            this.Usuarios.Image = ((System.Drawing.Image)(resources.GetObject("Usuarios.Image")));
+            this.Usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Usuarios.Location = new System.Drawing.Point(456, 0);
+            this.Usuarios.Name = "Usuarios";
+            this.Usuarios.Size = new System.Drawing.Size(141, 56);
+            this.Usuarios.TabIndex = 4;
+            this.Usuarios.Text = "USUARIOS";
+            this.Usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Usuarios.UseVisualStyleBackColor = false;
+            this.Usuarios.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // MostrarInformacion
+            // 
+            this.MostrarInformacion.BackColor = System.Drawing.Color.Transparent;
+            this.MostrarInformacion.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MostrarInformacion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.MostrarInformacion.FlatAppearance.BorderSize = 2;
+            this.MostrarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MostrarInformacion.ForeColor = System.Drawing.Color.Black;
+            this.MostrarInformacion.Image = ((System.Drawing.Image)(resources.GetObject("MostrarInformacion.Image")));
+            this.MostrarInformacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MostrarInformacion.Location = new System.Drawing.Point(192, 0);
+            this.MostrarInformacion.Name = "MostrarInformacion";
+            this.MostrarInformacion.Size = new System.Drawing.Size(264, 56);
+            this.MostrarInformacion.TabIndex = 3;
+            this.MostrarInformacion.Text = "MOSTRAR INFORMACIÓN";
+            this.MostrarInformacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MostrarInformacion.UseVisualStyleBackColor = false;
+            this.MostrarInformacion.Click += new System.EventHandler(this.MostrarInformacion_Click);
+            // 
+            // Info
+            // 
+            this.Info.BackColor = System.Drawing.Color.Black;
+            this.Info.Controls.Add(this.Mini);
+            this.Info.Controls.Add(this.Nombre);
+            this.Info.Controls.Add(this.Maxi);
+            this.Info.Controls.Add(this.Cerrar);
+            this.Info.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Info.Location = new System.Drawing.Point(208, 0);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(1158, 30);
+            this.Info.TabIndex = 1;
+            // 
             // Nombre
             // 
             this.Nombre.AutoSize = true;
@@ -339,6 +327,18 @@
             this.Nombre.Size = new System.Drawing.Size(167, 25);
             this.Nombre.TabIndex = 0;
             this.Nombre.Text = "Administrador: ";
+            // 
+            // Logo
+            // 
+            this.Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
+            this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
+            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Padding = new System.Windows.Forms.Padding(5);
+            this.Logo.Size = new System.Drawing.Size(208, 196);
+            this.Logo.TabIndex = 0;
             // 
             // panel1
             // 
@@ -353,6 +353,7 @@
             // Contenedor
             // 
             this.Contenedor.AutoSize = true;
+            this.Contenedor.BackColor = System.Drawing.Color.Silver;
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenedor.Location = new System.Drawing.Point(0, 196);
             this.Contenedor.Name = "Contenedor";
@@ -377,12 +378,12 @@
             this.Load += new System.EventHandler(this.Administrador_Load);
             this.Head.ResumeLayout(false);
             this.Head.PerformLayout();
+            this.Menu.ResumeLayout(false);
+            this.SubmenuU.ResumeLayout(false);
+            this.SubmenuCD.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.Info.ResumeLayout(false);
             this.Info.PerformLayout();
-            this.Menu.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.SubmenuCD.ResumeLayout(false);
-            this.SubmenuU.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
