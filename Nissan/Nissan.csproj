@@ -71,6 +71,11 @@
     <Compile Include="Administrador\CargaAPV.Designer.cs">
       <DependentUpon>CargaAPV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="APV\APV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +160,17 @@
     <EmbeddedResource Include="Ventanilla unica\Ventanilla unica.resx">
       <DependentUpon>Ventanilla unica.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Administrador\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administrador\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Administrador\GeishaDataSet.xsc">
       <DependentUpon>GeishaDataSet.xsd</DependentUpon>
     </None>

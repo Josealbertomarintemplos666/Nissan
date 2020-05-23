@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Z.Dapper.Plus;
 
 namespace Nissan.Administrador
 {
@@ -79,8 +81,32 @@ namespace Nissan.Administrador
         private void CargaAPV_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'geishaDataSet.Asesor' Puede moverla o quitarla según sea necesario.
-            this.asesorTableAdapter.Fill(this.geishaDataSet.Asesor);
+            //this.asesorTableAdapter.Fill(this.geishaDataSet.Asesor);
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Nissan.Base_de_datos.Conexion Conect = new Base_de_datos.Conexion();
+                //string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
+                // string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
+                DapperPlusManager.Entity<Asesor>().Table("Asesor");
+                List<Asesor> asesores = asesorBindingSource.DataSource as List<Asesor>;
+                if (asesores != null)
+                {
+                    using (IDbConnection db = new SqlConnection(Conect.Conect))
+                    {
+                        db.BulkInsert(asesores);
+                    }
+                }
+                MessageBox.Show("Inserción Correcta");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

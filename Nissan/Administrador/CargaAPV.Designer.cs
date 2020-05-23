@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.asesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.geishaDataSet = new Nissan.GeishaDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -38,15 +40,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.geishaDataSet = new Nissan.GeishaDataSet();
-            this.asesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.asesorTableAdapter = new Nissan.GeishaDataSetTableAdapters.AsesorTableAdapter();
-            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asesorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,17 +57,22 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombresDataGridViewTextBoxColumn,
-            this.agenteDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.asesorBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(188, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1012, 295);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // asesorBindingSource
+            // 
+            this.asesorBindingSource.DataMember = "Asesor";
+            this.asesorBindingSource.DataSource = this.geishaDataSet;
+            // 
+            // geishaDataSet
+            // 
+            this.geishaDataSet.DataSetName = "GeishaDataSet";
+            this.geishaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel2
             // 
@@ -110,6 +113,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Importar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -144,31 +148,9 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Hoja:";
             // 
-            // geishaDataSet
-            // 
-            this.geishaDataSet.DataSetName = "GeishaDataSet";
-            this.geishaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // asesorBindingSource
-            // 
-            this.asesorBindingSource.DataMember = "Asesor";
-            this.asesorBindingSource.DataSource = this.geishaDataSet;
-            // 
             // asesorTableAdapter
             // 
             this.asesorTableAdapter.ClearBeforeFill = true;
-            // 
-            // nombresDataGridViewTextBoxColumn
-            // 
-            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "nombres";
-            this.nombresDataGridViewTextBoxColumn.HeaderText = "nombres";
-            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
-            // 
-            // agenteDataGridViewTextBoxColumn
-            // 
-            this.agenteDataGridViewTextBoxColumn.DataPropertyName = "agente";
-            this.agenteDataGridViewTextBoxColumn.HeaderText = "agente";
-            this.agenteDataGridViewTextBoxColumn.Name = "agenteDataGridViewTextBoxColumn";
             // 
             // CargaAPV
             // 
@@ -183,10 +165,10 @@
             this.Text = "CargaAPV";
             this.Load += new System.EventHandler(this.CargaAPV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asesorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asesorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,7 +187,5 @@
         private Nissan.GeishaDataSet geishaDataSet;
         private System.Windows.Forms.BindingSource asesorBindingSource;
         private Nissan.GeishaDataSetTableAdapters.AsesorTableAdapter asesorTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn agenteDataGridViewTextBoxColumn;
     }
 }
