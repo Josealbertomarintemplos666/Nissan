@@ -18,7 +18,7 @@ create table Ventanilla(
 idventanilla int identity(1,1) primary key,
 nombre varchar(50) not null
 )
-create table APV(
+create table Asesor(
 idapv int identity(1,1) primary key,
 nombres varchar(80),
 agente int
@@ -68,7 +68,7 @@ idapv int not null,
 vin varchar(25) not null,
 fechapromesa date not null,
 clente varchar(100) not null,
-foreign key (idapv) references APV(idapv),
+foreign key (idapv) references Asesor(idapv),
 foreign key (vin) references Vin(vin)
 )
 
@@ -102,4 +102,4 @@ select * from sesion where usuario='juan' and contraseña='1234'
 
 select * from Vin
 
-select * from APV
+select * from Asesor
