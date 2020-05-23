@@ -65,6 +65,12 @@
     <Compile Include="Administrador\Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\CargaAPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\CargaAPV.Designer.cs">
+      <DependentUpon>CargaAPV.cs</DependentUpon>
+    </Compile>
     <Compile Include="APV\APV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="Vin.cs" />
     <EmbeddedResource Include="Administrador\Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\CargaAPV.resx">
+      <DependentUpon>CargaAPV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="APV\APV.resx">
       <DependentUpon>APV.cs</DependentUpon>

@@ -68,5 +68,17 @@ namespace Nissan.Administrador
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            CargaAPV BV = new CargaAPV();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
+        }
     }
 }

@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.geishaDataSet = new Nissan.Administrador.GeishaDataSet();
-            this.vinBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vinTableAdapter = new Nissan.Administrador.GeishaDataSetTableAdapters.VinTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnImport = new System.Windows.Forms.Button();
             this.cboTabla = new System.Windows.Forms.ComboBox();
@@ -41,12 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.geishaDataSet = new Nissan.Administrador.GeishaDataSet();
+            this.vinBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vinTableAdapter = new Nissan.Administrador.GeishaDataSetTableAdapters.VinTableAdapter();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vinBindingSource)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,19 +69,17 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // geishaDataSet
+            // dataGridView1
             // 
-            this.geishaDataSet.DataSetName = "GeishaDataSet";
-            this.geishaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vinBindingSource
-            // 
-            this.vinBindingSource.DataMember = "Vin";
-            this.vinBindingSource.DataSource = this.geishaDataSet;
-            // 
-            // vinTableAdapter
-            // 
-            this.vinTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1012, 508);
+            this.dataGridView1.TabIndex = 12;
             // 
             // panel4
             // 
@@ -162,17 +160,19 @@
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click_1);
             // 
-            // dataGridView1
+            // geishaDataSet
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1012, 508);
-            this.dataGridView1.TabIndex = 12;
+            this.geishaDataSet.DataSetName = "GeishaDataSet";
+            this.geishaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vinBindingSource
+            // 
+            this.vinBindingSource.DataMember = "Vin";
+            this.vinBindingSource.DataSource = this.geishaDataSet;
+            // 
+            // vinTableAdapter
+            // 
+            this.vinTableAdapter.ClearBeforeFill = true;
             // 
             // CargaDatos
             // 
@@ -187,11 +187,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CargaDatos_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vinBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geishaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vinBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
