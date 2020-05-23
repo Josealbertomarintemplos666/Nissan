@@ -41,11 +41,11 @@ namespace Nissan
             foreach(String palabra in posibles_palabras)
             {
                 if (dato.Length == 0) {
-                    dato = "(vin Like '%"+ palabra+"%')";
+                    dato = "(Vins Like '%"+ palabra+"%')";
                 }
                 else
                 {
-                    dato += " AND (vin Like '%" + palabra + "%')";
+                    dato += " AND (Vins Like '%" + palabra + "%')";
                 }
             }
                 filtro.RowFilter = dato;
