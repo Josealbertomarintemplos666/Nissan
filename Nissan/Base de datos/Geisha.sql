@@ -1,8 +1,9 @@
+drop database Geisha
 --Creación de la base de datos
 
 create database Geisha
 use Geisha
-drop database Geisha
+
 
 create table Vin(
 vin  varchar(25) primary key,
@@ -19,9 +20,8 @@ nombre varchar(50) not null
 )
 create table APV(
 idapv int identity(1,1) primary key,
-nombres varchar(50),
-apellido_materna varchar(50),
-apellido_paterno varchar(50)
+nombres varchar(80),
+agente int
 )
 
 
@@ -101,3 +101,5 @@ select * from sesion
 select * from sesion where usuario='juan' and contraseña='1234'
 
 select * from Vin
+
+select * from APV

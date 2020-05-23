@@ -71,6 +71,7 @@
     <Compile Include="Administrador\CargaAPV.Designer.cs">
       <DependentUpon>CargaAPV.cs</DependentUpon>
     </Compile>
+    <Compile Include="apv.cs" />
     <Compile Include="APV\APV.cs">
       <SubType>Form</SubType>
     </Compile>
