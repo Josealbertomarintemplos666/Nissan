@@ -135,6 +135,14 @@ namespace Nissan.Administrador
         private void NuevoUser_Click(object sender, EventArgs e)
         {
             ocultasub();
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            InsertarUsuario BV = new InsertarUsuario();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

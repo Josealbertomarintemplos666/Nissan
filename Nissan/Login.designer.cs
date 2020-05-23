@@ -170,7 +170,7 @@
             this.Usuario.BackColor = System.Drawing.SystemColors.Control;
             this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Usuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario.Location = new System.Drawing.Point(172, 164);
+            this.Usuario.Location = new System.Drawing.Point(172, 163);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(225, 24);
             this.Usuario.TabIndex = 3;
