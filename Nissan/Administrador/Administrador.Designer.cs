@@ -353,7 +353,7 @@
             // Contenedor
             // 
             this.Contenedor.AutoSize = true;
-            this.Contenedor.BackColor = System.Drawing.Color.Silver;
+            this.Contenedor.BackColor = System.Drawing.Color.LightGray;
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenedor.Location = new System.Drawing.Point(0, 196);
             this.Contenedor.Name = "Contenedor";
