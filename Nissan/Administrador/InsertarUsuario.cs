@@ -61,5 +61,46 @@ namespace Nissan.Administrador
         {
 
         }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "")
+            {
+                textBox3.Text = "Nombre";
+                textBox3.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Nombre")
+            {
+                textBox3.Text = "";
+                textBox3.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox4_Enter(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "Agente")
+            {
+                textBox4.Text = "";
+                textBox4.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "")
+            {
+                textBox4.Text = "Agente";
+                textBox4.ForeColor = Color.Black;
+            }
+        }
     }
 }

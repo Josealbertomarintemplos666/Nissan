@@ -299,6 +299,11 @@ namespace Nissan
                 }
             }
         }
+
+        private void Usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
    
