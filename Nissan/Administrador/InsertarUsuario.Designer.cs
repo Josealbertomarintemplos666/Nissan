@@ -73,17 +73,21 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.textBox3.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox3.Location = new System.Drawing.Point(454, 138);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(225, 31);
             this.textBox3.TabIndex = 14;
             this.textBox3.Text = "Nombre";
+            this.textBox3.ReadOnlyChanged += new System.EventHandler(this.textBox3_ReadOnlyChanged);
+            this.textBox3.TabIndexChanged += new System.EventHandler(this.textBox3_TabIndexChanged);
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.textBox4.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox4.Location = new System.Drawing.Point(454, 217);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(225, 31);

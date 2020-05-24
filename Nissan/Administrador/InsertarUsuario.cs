@@ -102,5 +102,15 @@ namespace Nissan.Administrador
                 textBox4.ForeColor = Color.Black;
             }
         }
+
+        private void textBox3_TabIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_ReadOnlyChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
