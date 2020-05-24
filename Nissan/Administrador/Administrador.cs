@@ -148,6 +148,14 @@ namespace Nissan.Administrador
         private void button5_Click(object sender, EventArgs e)
         {
             ocultasub();
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            InsertarVentanilla BV = new InsertarVentanilla();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
         }
 
         private void MostrarInformacion_Click(object sender, EventArgs e)

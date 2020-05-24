@@ -179,7 +179,7 @@
             this.ConfigurarUsuario.Name = "ConfigurarUsuario";
             this.ConfigurarUsuario.Size = new System.Drawing.Size(190, 55);
             this.ConfigurarUsuario.TabIndex = 5;
-            this.ConfigurarUsuario.Text = "Modificar Usuario";
+            this.ConfigurarUsuario.Text = "Nuevo Ventanilla";
             this.ConfigurarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConfigurarUsuario.UseVisualStyleBackColor = false;
             this.ConfigurarUsuario.Click += new System.EventHandler(this.button5_Click);
@@ -198,7 +198,7 @@
             this.NuevoUser.Name = "NuevoUser";
             this.NuevoUser.Size = new System.Drawing.Size(171, 55);
             this.NuevoUser.TabIndex = 4;
-            this.NuevoUser.Text = "Nuevo Usuario";
+            this.NuevoUser.Text = "Nuevo APV";
             this.NuevoUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NuevoUser.UseVisualStyleBackColor = false;
             this.NuevoUser.Click += new System.EventHandler(this.NuevoUser_Click);
@@ -279,7 +279,7 @@
             this.Usuarios.Name = "Usuarios";
             this.Usuarios.Size = new System.Drawing.Size(141, 56);
             this.Usuarios.TabIndex = 4;
-            this.Usuarios.Text = "USUARIOS";
+            this.Usuarios.Text = "REGISTROS";
             this.Usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Usuarios.UseVisualStyleBackColor = false;
             this.Usuarios.Click += new System.EventHandler(this.button8_Click);

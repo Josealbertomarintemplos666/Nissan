@@ -82,6 +82,12 @@
     <Compile Include="Administrador\InsertarUsuario.Designer.cs">
       <DependentUpon>InsertarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\InsertarVentanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\InsertarVentanilla.Designer.cs">
+      <DependentUpon>InsertarVentanilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="APV\APV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\InsertarUsuario.resx">
       <DependentUpon>InsertarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\InsertarVentanilla.resx">
+      <DependentUpon>InsertarVentanilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="APV\APV.resx">
       <DependentUpon>APV.cs</DependentUpon>
