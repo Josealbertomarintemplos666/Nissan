@@ -68,7 +68,7 @@
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(225, 24);
             this.Usuario.TabIndex = 4;
-            this.Usuario.Text = "Usuario";
+            this.Usuario.Text = "Nombres";
             // 
             // lineShape1
             // 
@@ -100,7 +100,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(225, 24);
             this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "textBox1";
+            this.textBox1.Text = "Agentes";
             // 
             // lineShape2
             // 
@@ -116,11 +116,11 @@
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(221, 310);
+            this.button1.Location = new System.Drawing.Point(229, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(278, 35);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Entrar";
+            this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // InsertarUsuario
