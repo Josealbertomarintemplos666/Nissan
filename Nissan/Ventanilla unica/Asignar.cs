@@ -39,5 +39,29 @@ namespace Nissan.Ventanilla_unica
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            tramites BV = new tramites();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            preparacion BV = new preparacion();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
+        }
     }
 }
