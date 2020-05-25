@@ -16,10 +16,33 @@ namespace Nissan
         {
             InitializeComponent();
 
-            this.Text = nombre;
+            this.Text = "Vin: " + nombre;
         }
 
+
         private void VentanaVin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Nissan.Ventanilla_unica.Asignar vent = new Ventanilla_unica.Asignar();
+            vent.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

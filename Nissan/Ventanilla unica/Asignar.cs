@@ -34,5 +34,10 @@ namespace Nissan.Ventanilla_unica
             this.Contenedor.Tag = BV;
             BV.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
