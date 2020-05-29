@@ -34,7 +34,9 @@ namespace Nissan.Administrador
         }
 
         private void Cerrar_Click(object sender, EventArgs e)
+
         {
+
             Login login = new Login();
             this.Close();
             login.Show();

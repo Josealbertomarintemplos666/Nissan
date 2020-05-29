@@ -32,7 +32,7 @@ namespace Nissan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             Nissan.Ventanilla_unica.Asignar vent = new Ventanilla_unica.Asignar();
             vent.Show();
         }
