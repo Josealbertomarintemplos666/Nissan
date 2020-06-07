@@ -56,6 +56,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -80,6 +81,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(129, 0);
@@ -91,7 +93,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(35)))), ((int)(((byte)(133)))));
             this.label1.Location = new System.Drawing.Point(104, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 39);
@@ -100,6 +102,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(471, 0);
@@ -158,7 +161,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.BackColor = System.Drawing.Color.Navy;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 110);
             this.panel3.Name = "panel3";
@@ -167,7 +170,7 @@
             // 
             // Usuario
             // 
-            this.Usuario.BackColor = System.Drawing.SystemColors.Control;
+            this.Usuario.BackColor = System.Drawing.Color.DarkGray;
             this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Usuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuario.Location = new System.Drawing.Point(172, 163);
@@ -182,7 +185,7 @@
             // 
             // PASS
             // 
-            this.PASS.BackColor = System.Drawing.SystemColors.Control;
+            this.PASS.BackColor = System.Drawing.Color.DarkGray;
             this.PASS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PASS.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PASS.Location = new System.Drawing.Point(172, 233);
@@ -209,10 +212,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(240, 298);
+            this.button1.Location = new System.Drawing.Point(227, 304);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(278, 35);
             this.button1.TabIndex = 7;
@@ -254,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(611, 369);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);

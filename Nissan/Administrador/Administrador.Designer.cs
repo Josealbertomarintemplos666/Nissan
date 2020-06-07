@@ -84,8 +84,8 @@
             this.Mini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Mini.Dock = System.Windows.Forms.DockStyle.Right;
             this.Mini.FlatAppearance.BorderSize = 0;
-            this.Mini.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
-            this.Mini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
+            this.Mini.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkBlue;
+            this.Mini.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.Mini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mini.Location = new System.Drawing.Point(1065, 0);
             this.Mini.Name = "Mini";
@@ -101,8 +101,8 @@
             this.Maxi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Maxi.Dock = System.Windows.Forms.DockStyle.Right;
             this.Maxi.FlatAppearance.BorderSize = 0;
-            this.Maxi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
-            this.Maxi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
+            this.Maxi.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkBlue;
+            this.Maxi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.Maxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Maxi.Location = new System.Drawing.Point(1096, 0);
             this.Maxi.Name = "Maxi";
@@ -118,8 +118,8 @@
             this.Cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Cerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.Cerrar.FlatAppearance.BorderSize = 0;
-            this.Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
-            this.Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
+            this.Cerrar.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkBlue;
+            this.Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cerrar.Location = new System.Drawing.Point(1127, 0);
             this.Cerrar.Name = "Cerrar";
@@ -305,7 +305,7 @@
             // 
             // Info
             // 
-            this.Info.BackColor = System.Drawing.Color.Black;
+            this.Info.BackColor = System.Drawing.Color.MidnightBlue;
             this.Info.Controls.Add(this.Mini);
             this.Info.Controls.Add(this.Nombre);
             this.Info.Controls.Add(this.Maxi);
@@ -330,7 +330,7 @@
             // 
             // Logo
             // 
-            this.Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
+            this.Logo.BackColor = System.Drawing.Color.White;
             this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
@@ -353,7 +353,7 @@
             // Contenedor
             // 
             this.Contenedor.AutoSize = true;
-            this.Contenedor.BackColor = System.Drawing.Color.LightGray;
+            this.Contenedor.BackColor = System.Drawing.Color.Gray;
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenedor.Location = new System.Drawing.Point(0, 196);
             this.Contenedor.Name = "Contenedor";

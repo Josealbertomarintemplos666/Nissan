@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
-            this.label1.Location = new System.Drawing.Point(365, 44);
+            this.label1.Location = new System.Drawing.Point(298, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(500, 42);
             this.label1.TabIndex = 12;
@@ -60,7 +60,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(402, 293);
+            this.button1.Location = new System.Drawing.Point(404, 281);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(278, 35);
             this.button1.TabIndex = 14;
@@ -71,7 +71,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox2.Location = new System.Drawing.Point(428, 169);
+            this.textBox2.Location = new System.Drawing.Point(438, 168);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(225, 31);
             this.textBox2.TabIndex = 16;

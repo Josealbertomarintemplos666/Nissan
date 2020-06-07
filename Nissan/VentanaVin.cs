@@ -12,6 +12,7 @@ namespace Nissan
 {
     public partial class VentanaVin : Form
     {
+        
         public VentanaVin( String nombre)
         {
             InitializeComponent();
@@ -46,5 +47,7 @@ namespace Nissan
         {
 
         }
+
+      
     }
 }
