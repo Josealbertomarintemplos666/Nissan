@@ -229,7 +229,7 @@
             // 
             // Info
             // 
-            this.Info.BackColor = System.Drawing.Color.Black;
+            this.Info.BackColor = System.Drawing.Color.Navy;
             this.Info.Controls.Add(this.Mini);
             this.Info.Controls.Add(this.Nombre);
             this.Info.Controls.Add(this.Maxi);
@@ -305,7 +305,7 @@
             // 
             // Logo
             // 
-            this.Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
+            this.Logo.BackColor = System.Drawing.Color.White;
             this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
