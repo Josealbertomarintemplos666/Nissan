@@ -178,7 +178,7 @@
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(225, 24);
             this.Usuario.TabIndex = 3;
-            this.Usuario.Text = "Usuario";
+            this.Usuario.Text = "Usuari";
             this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
             this.Usuario.Enter += new System.EventHandler(this.Usuario_Enter);
             this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
