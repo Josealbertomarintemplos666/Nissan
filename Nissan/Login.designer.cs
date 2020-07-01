@@ -193,7 +193,7 @@
             this.PASS.Name = "PASS";
             this.PASS.Size = new System.Drawing.Size(225, 24);
             this.PASS.TabIndex = 4;
-            this.PASS.Text = "Contraseñ";
+            this.PASS.Text = "Contraseña";
             this.PASS.Enter += new System.EventHandler(this.textBox1_Enter);
             this.PASS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PASS_KeyPress);
             this.PASS.Leave += new System.EventHandler(this.PASS_Leave);
