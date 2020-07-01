@@ -75,7 +75,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 692);
+            this.panel1.Size = new System.Drawing.Size(1362, 692);
             this.panel1.TabIndex = 10;
             // 
             // Contenedor
@@ -85,7 +85,7 @@
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenedor.Location = new System.Drawing.Point(0, 141);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(1370, 551);
+            this.Contenedor.Size = new System.Drawing.Size(1362, 551);
             this.Contenedor.TabIndex = 6;
             // 
             // Head
@@ -98,7 +98,7 @@
             this.Head.Dock = System.Windows.Forms.DockStyle.Top;
             this.Head.Location = new System.Drawing.Point(0, 0);
             this.Head.Name = "Head";
-            this.Head.Size = new System.Drawing.Size(1370, 141);
+            this.Head.Size = new System.Drawing.Size(1362, 141);
             this.Head.TabIndex = 2;
             // 
             // Menu
@@ -110,7 +110,7 @@
             this.Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Menu.Location = new System.Drawing.Point(208, 30);
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(1162, 111);
+            this.Menu.Size = new System.Drawing.Size(1154, 111);
             this.Menu.TabIndex = 2;
             // 
             // SubmenuU
@@ -120,7 +120,7 @@
             this.SubmenuU.Dock = System.Windows.Forms.DockStyle.Top;
             this.SubmenuU.Location = new System.Drawing.Point(0, 56);
             this.SubmenuU.Name = "SubmenuU";
-            this.SubmenuU.Size = new System.Drawing.Size(1162, 55);
+            this.SubmenuU.Size = new System.Drawing.Size(1154, 55);
             this.SubmenuU.TabIndex = 2;
             this.SubmenuU.Visible = false;
             // 
@@ -169,7 +169,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1162, 56);
+            this.panel4.Size = new System.Drawing.Size(1154, 56);
             this.panel4.TabIndex = 0;
             // 
             // Usuarios
@@ -237,7 +237,7 @@
             this.Info.Dock = System.Windows.Forms.DockStyle.Top;
             this.Info.Location = new System.Drawing.Point(208, 0);
             this.Info.Name = "Info";
-            this.Info.Size = new System.Drawing.Size(1162, 30);
+            this.Info.Size = new System.Drawing.Size(1154, 30);
             this.Info.TabIndex = 1;
             // 
             // Mini
@@ -250,7 +250,7 @@
             this.Mini.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Mini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Mini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mini.Location = new System.Drawing.Point(1069, 0);
+            this.Mini.Location = new System.Drawing.Point(1061, 0);
             this.Mini.Name = "Mini";
             this.Mini.Size = new System.Drawing.Size(31, 30);
             this.Mini.TabIndex = 2;
@@ -279,7 +279,7 @@
             this.Maxi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Maxi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Maxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Maxi.Location = new System.Drawing.Point(1100, 0);
+            this.Maxi.Location = new System.Drawing.Point(1092, 0);
             this.Maxi.Name = "Maxi";
             this.Maxi.Size = new System.Drawing.Size(31, 30);
             this.Maxi.TabIndex = 1;
@@ -296,7 +296,7 @@
             this.Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(8)))), ((int)(((byte)(48)))));
             this.Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cerrar.Location = new System.Drawing.Point(1131, 0);
+            this.Cerrar.Location = new System.Drawing.Point(1123, 0);
             this.Cerrar.Name = "Cerrar";
             this.Cerrar.Size = new System.Drawing.Size(31, 30);
             this.Cerrar.TabIndex = 0;
@@ -320,7 +320,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1370, 692);
+            this.ClientSize = new System.Drawing.Size(1362, 692);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);

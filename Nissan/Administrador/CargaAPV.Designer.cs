@@ -108,7 +108,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1017, 681);
+            this.dataGridView1.Size = new System.Drawing.Size(1009, 681);
             this.dataGridView1.TabIndex = 2;
             // 
             // asesorBindingSource
@@ -294,14 +294,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(369, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1017, 681);
+            this.panel3.Size = new System.Drawing.Size(1009, 681);
             this.panel3.TabIndex = 3;
             // 
             // CargaAPV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 681);
+            this.ClientSize = new System.Drawing.Size(1378, 681);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

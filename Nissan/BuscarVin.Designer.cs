@@ -257,14 +257,14 @@
             this.padre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.padre.Location = new System.Drawing.Point(240, 0);
             this.padre.Name = "padre";
-            this.padre.Size = new System.Drawing.Size(1146, 676);
+            this.padre.Size = new System.Drawing.Size(1138, 676);
             this.padre.TabIndex = 3;
             // 
             // BuscarVin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 676);
+            this.ClientSize = new System.Drawing.Size(1378, 676);
             this.Controls.Add(this.padre);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
