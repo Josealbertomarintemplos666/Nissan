@@ -72,25 +72,37 @@ namespace Nissan
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Nissan.Base_de_datos.Conexion conexion = new Base_de_datos.Conexion();
+
+            SqlConnection Conect = new SqlConnection("Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True");
+
+            SqlCommand agregar = new SqlCommand("insert into Vin values(@vin,@descripcion,@cuota,@cabecera,@motor,@colext,@estatus)", Conect);
+            Conect.Open();
+
             try
             {
-                Nissan.Base_de_datos.Conexion Conect = new Base_de_datos.Conexion();
-                //string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
-                // string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
-                DapperPlusManager.Entity<Vin>().Table("Vin");
-                List<Vin> vins = vinBindingSource.DataSource as List<Vin>;
-                if (vins != null)
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    using (IDbConnection db = new SqlConnection(Conect.Conect))
-                    {
-                        db.BulkInsert(vins);
-                    }
+                    agregar.Parameters.Clear();
+
+                    agregar.Parameters.AddWithValue("@vin", Convert.ToString(row.Cells["vin"].Value));
+                    agregar.Parameters.AddWithValue("@descripcion", Convert.ToString(row.Cells["descripcion"].Value));
+                    agregar.Parameters.AddWithValue("@cuota", Convert.ToString(row.Cells["cuota"].Value));
+                    agregar.Parameters.AddWithValue("@cabecera", Convert.ToString(row.Cells["cabecera"].Value));
+                    agregar.Parameters.AddWithValue("@motor", Convert.ToString(row.Cells["motor"].Value));
+                    agregar.Parameters.AddWithValue("@colext", Convert.ToString(row.Cells["colext"].Value));
+                    agregar.Parameters.AddWithValue("@estatus", Convert.ToString("No iniciado"));
+                    agregar.ExecuteNonQuery();
                 }
-                MessageBox.Show("Inserción Correcta");
+                MessageBox.Show("Datos Agregados");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al agregar");
+            }
+            finally
+            {
+                Conect.Close();
             }
         }
 
