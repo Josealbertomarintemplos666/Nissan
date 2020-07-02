@@ -65,6 +65,10 @@ namespace Nissan.Administrador
                 MessageBox.Show("Datos insertados");
             }
             else MessageBox.Show("No se han podido insertar los datos");
+            textBox3.Text = "Nombre";
+            textBox4.Text = "Agente";
+            textBox3.ForeColor = Color.Gray;
+            textBox4.ForeColor = Color.Gray;
         }
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
@@ -77,7 +81,7 @@ namespace Nissan.Administrador
             if (textBox3.Text == "")
             {
                 textBox3.Text = "Nombre";
-                textBox3.ForeColor = Color.Black;
+                textBox3.ForeColor = Color.Gray;
             }
         }
 
@@ -104,7 +108,7 @@ namespace Nissan.Administrador
             if (textBox4.Text == "")
             {
                 textBox4.Text = "Agente";
-                textBox4.ForeColor = Color.Black;
+                textBox4.ForeColor = Color.Gray;
             }
         }
 

@@ -188,6 +188,9 @@
     <EmbeddedResource Include="Administrador\InsertarVentanilla.resx">
       <DependentUpon>InsertarVentanilla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\VinS.resx">
+      <DependentUpon>VinS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="APV\APV.resx">
       <DependentUpon>APV.cs</DependentUpon>
     </EmbeddedResource>

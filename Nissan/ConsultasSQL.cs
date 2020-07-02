@@ -22,5 +22,15 @@ namespace Nissan
             if (filasafectadas2 > 0) return true;
             else return false;
         }
+
+        public bool InsertarVin(string vin, string descripcion, string cuota, string cabecera, string motor, string colext)
+        {
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand(string.Format("insert into Vin values ('{0}','{1}','{2}','{3}','{4}','{5}','No iniciado')", new string[] { vin, descripcion, cuota, cabecera, motor, colext }), conexion);
+            int filasafectadas = cmd.ExecuteNonQuery();
+            conexion.Close();
+            if (filasafectadas > 0) return true;
+            else return false;
+        }
     }
 }
