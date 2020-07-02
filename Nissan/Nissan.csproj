@@ -88,6 +88,18 @@
     <Compile Include="Administrador\InsertarVentanilla.Designer.cs">
       <DependentUpon>InsertarVentanilla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\OperadorVentanillaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\OperadorVentanillaS.Designer.cs">
+      <DependentUpon>OperadorVentanillaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\OperariosS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\OperariosS.Designer.cs">
+      <DependentUpon>OperariosS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\VinS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,8 +200,16 @@
     <EmbeddedResource Include="Administrador\InsertarVentanilla.resx">
       <DependentUpon>InsertarVentanilla.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Administrador\OperadorVentanillaS.resx">
+      <DependentUpon>OperadorVentanillaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\OperariosS.resx">
+      <DependentUpon>OperariosS.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Administrador\VinS.resx">
       <DependentUpon>VinS.cs</DependentUpon>
+>>>>>>> b9efc5b37fbb7f14ed42b43a1c1f590d99d82bda
     </EmbeddedResource>
     <EmbeddedResource Include="APV\APV.resx">
       <DependentUpon>APV.cs</DependentUpon>

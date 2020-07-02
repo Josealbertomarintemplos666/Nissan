@@ -23,6 +23,44 @@ namespace Nissan
             else return false;
         }
 
+<<<<<<< HEAD
+        public bool InsertarVentanilla(string nombre)
+        {
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand(string.Format("insert into Ventanilla values ('{0}','1234','Ventanilla Unica')", new string[] {nombre}), conexion);
+            SqlCommand cmd2 = new SqlCommand(string.Format("insert into sesion values ('{0}','1234','Ventanilla Unica')", new string[] { nombre }), conexion);
+            int filasafectadas = cmd.ExecuteNonQuery();
+            int filasafectadas2 = cmd2.ExecuteNonQuery();
+            conexion.Close();
+            if (filasafectadas > 0) return true;
+            if (filasafectadas2 > 0) return true;
+            else return false;
+        }
+
+        public bool InsertarOperadorVentanilla(string nombre)
+        {
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand(string.Format("insert into OperadorVentanilla values ('{0}','1234','Operador Ventanilla Unica')", new string[] {nombre }), conexion);
+            SqlCommand cmd2 = new SqlCommand(string.Format("insert into sesion values ('{0}','1234','Operador Ventanilla Unica')", new string[] { nombre }), conexion);
+            int filasafectadas = cmd.ExecuteNonQuery();
+            int filasafectadas2 = cmd2.ExecuteNonQuery();
+            conexion.Close();
+            if (filasafectadas > 0) return true;
+            if (filasafectadas2 > 0) return true;
+            else return false;
+        }
+
+        public bool InsertarOperario(string nombre)
+        {
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand(string.Format("insert into Operarios values ('{0}','1234','Operario')", new string[] {nombre}), conexion);
+            SqlCommand cmd2 = new SqlCommand(string.Format("insert into sesion values ('{0}','1234','Operario')", new string[] { nombre }), conexion);
+            int filasafectadas = cmd.ExecuteNonQuery();
+            int filasafectadas2 = cmd2.ExecuteNonQuery();
+            conexion.Close();
+            if (filasafectadas > 0) return true;
+            if (filasafectadas2 > 0) return true;
+=======
         public bool InsertarVin(string vin, string descripcion, string cuota, string cabecera, string motor, string colext)
         {
             conexion.Open();
@@ -30,6 +68,7 @@ namespace Nissan
             int filasafectadas = cmd.ExecuteNonQuery();
             conexion.Close();
             if (filasafectadas > 0) return true;
+>>>>>>> b9efc5b37fbb7f14ed42b43a1c1f590d99d82bda
             else return false;
         }
     }

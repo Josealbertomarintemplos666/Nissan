@@ -181,7 +181,7 @@ namespace Nissan.Administrador
             ocultasub();
             if (this.Contenedor.Controls.Count > 0)
                 this.Contenedor.Controls.RemoveAt(0);
-            InsertarUsuario BV = new InsertarUsuario();
+            OperadorVentanillaS BV = new OperadorVentanillaS();
             BV.TopLevel = false;
             BV.StartPosition = FormStartPosition.CenterScreen;
             this.Contenedor.Controls.Add(BV);
@@ -209,7 +209,7 @@ namespace Nissan.Administrador
             ocultasub();
             if (this.Contenedor.Controls.Count > 0)
                 this.Contenedor.Controls.RemoveAt(0);
-            InsertarUsuario BV = new InsertarUsuario();
+            OperariosS BV = new OperariosS();
             BV.TopLevel = false;
             BV.StartPosition = FormStartPosition.CenterScreen;
             this.Contenedor.Controls.Add(BV);
