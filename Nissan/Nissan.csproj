@@ -113,6 +113,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeishaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ConsultasSQL.cs" />
     <Compile Include="GeishaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -63,7 +63,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.textBox3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox3.Location = new System.Drawing.Point(454, 135);
+            this.textBox3.Location = new System.Drawing.Point(454, 202);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(225, 31);
             this.textBox3.TabIndex = 14;
@@ -77,11 +77,12 @@
             // 
             this.textBox4.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.textBox4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox4.Location = new System.Drawing.Point(454, 214);
+            this.textBox4.Location = new System.Drawing.Point(454, 129);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(225, 31);
             this.textBox4.TabIndex = 15;
             this.textBox4.Text = "Agente";
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
             this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 

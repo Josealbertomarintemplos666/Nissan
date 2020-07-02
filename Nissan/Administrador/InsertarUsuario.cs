@@ -16,6 +16,7 @@ namespace Nissan.Administrador
         {
             InitializeComponent();
         }
+        ConsultasSQL sql = new ConsultasSQL();
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -59,7 +60,11 @@ namespace Nissan.Administrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           if (sql.Insertar(textBox4.Text, textBox3.Text))
+            {
+                MessageBox.Show("Datos insertados");
+            }
+            else MessageBox.Show("No se han podido insertar los datos");
         }
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
@@ -109,6 +114,11 @@ namespace Nissan.Administrador
         }
 
         private void textBox3_ReadOnlyChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
