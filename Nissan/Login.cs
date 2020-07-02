@@ -106,7 +106,7 @@ namespace Nissan
                         Nissan.Administrador.Administrador admin = new Administrador.Administrador(Usuario.Text);
                         admin.Show();
                     }
-                    if (conexion.Login(Usuario.Text, PASS.Text) == "Ventanilla unica")
+                    if (conexion.Login(Usuario.Text, PASS.Text) == "Operador Ventanilla unica")
                     {
                         this.Hide();
                         Nissan.Ventanilla_unica.Ventanilla_unica vent = new Ventanilla_unica.Ventanilla_unica(Usuario.Text);
@@ -158,7 +158,7 @@ namespace Nissan
                             Nissan.Administrador.Administrador admin = new Administrador.Administrador(Usuario.Text);
                             admin.Show();
                         }
-                        if (conexion.Login(Usuario.Text, PASS.Text) == "Ventanilla unica")
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Operador Ventanilla unica")
                         {
                             this.Hide();
                             Nissan.Ventanilla_unica.Ventanilla_unica vent = new Ventanilla_unica.Ventanilla_unica(Usuario.Text);
@@ -211,7 +211,7 @@ namespace Nissan
                             Nissan.Administrador.Administrador admin = new Administrador.Administrador(Usuario.Text);
                             admin.Show();
                         }
-                        if (conexion.Login(Usuario.Text, PASS.Text) == "Ventanilla unica")
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Operador Ventanilla unica")
                         {
                             this.Hide();
                             Nissan.Ventanilla_unica.Ventanilla_unica vent = new Ventanilla_unica.Ventanilla_unica(Usuario.Text);
@@ -264,7 +264,7 @@ namespace Nissan
                             Nissan.Administrador.Administrador admin = new Administrador.Administrador(Usuario.Text);
                             admin.Show();
                         }
-                        if (conexion.Login(Usuario.Text, PASS.Text) == "Ventanilla unica")
+                        if (conexion.Login(Usuario.Text, PASS.Text) == "Operador Ventanilla unica")
                         {
                             this.Hide();
                             Nissan.Ventanilla_unica.Ventanilla_unica vent = new Ventanilla_unica.Ventanilla_unica(Usuario.Text);

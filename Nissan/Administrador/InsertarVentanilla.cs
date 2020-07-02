@@ -40,5 +40,10 @@ namespace Nissan.Administrador
                 textBox2.ForeColor = Color.Black;
             }
         }
+
+        private void InsertarVentanilla_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
