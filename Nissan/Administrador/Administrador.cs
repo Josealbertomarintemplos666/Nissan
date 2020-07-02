@@ -175,5 +175,47 @@ namespace Nissan.Administrador
 
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ocultasub();
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            InsertarUsuario BV = new InsertarUsuario();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            ocultasub();
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            VinS BV = new VinS();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            ocultasub();
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            InsertarUsuario BV = new InsertarUsuario();
+            BV.TopLevel = false;
+            BV.StartPosition = FormStartPosition.CenterScreen;
+            this.Contenedor.Controls.Add(BV);
+            this.Contenedor.Tag = BV;
+            BV.Show();
+
+        }
     }
 }
