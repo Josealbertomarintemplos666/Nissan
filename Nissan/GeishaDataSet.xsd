@@ -41,7 +41,7 @@
   <xs:element name="GeishaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GeishaDataSet" msprop:Generator_UserDSName="GeishaDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Asesor" msprop:Generator_TableClassName="AsesorDataTable" msprop:Generator_TableVarName="tableAsesor" msprop:Generator_TablePropName="Asesor" msprop:Generator_RowDeletingName="AsesorRowDeleting" msprop:Generator_RowChangingName="AsesorRowChanging" msprop:Generator_RowEvHandlerName="AsesorRowChangeEventHandler" msprop:Generator_RowDeletedName="AsesorRowDeleted" msprop:Generator_UserTableName="Asesor" msprop:Generator_RowChangedName="AsesorRowChanged" msprop:Generator_RowEvArgName="AsesorRowChangeEvent" msprop:Generator_RowClassName="AsesorRow">
+        <xs:element name="Asesor" msprop:Generator_TableClassName="AsesorDataTable" msprop:Generator_TableVarName="tableAsesor" msprop:Generator_RowChangedName="AsesorRowChanged" msprop:Generator_TablePropName="Asesor" msprop:Generator_RowDeletingName="AsesorRowDeleting" msprop:Generator_RowChangingName="AsesorRowChanging" msprop:Generator_RowEvHandlerName="AsesorRowChangeEventHandler" msprop:Generator_RowDeletedName="AsesorRowDeleted" msprop:Generator_RowClassName="AsesorRow" msprop:Generator_UserTableName="Asesor" msprop:Generator_RowEvArgName="AsesorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres" minOccurs="0">

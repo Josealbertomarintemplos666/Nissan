@@ -26,10 +26,20 @@ roles varchar(30) not null
 
 create table Asesor(
 idapv int primary key,
-nombres varchar(80) unique not null,
+nombres varchar(80) not null,
 contraseña varchar(30) not null,
 roles varchar(30) not null
 )
+drop table Asesor
+select * from Asesor
+
+
+create table Asesor2(
+idapv int primary key,
+nombres varchar(80) not null,
+)
+select * from Asesor2
+drop table Asesor2
 
 create table OperadorVentanilla(
 idope int identity(1,1) primary key,
@@ -60,16 +70,19 @@ roles varchar(30) not null
 )
 
 create table sesion(
-usuario varchar(30) primary key,
+idsesion int identity(1,1) primary key,
+usuario varchar(80) not null,
 contraseña varchar(30) not null,
 roles varchar(30) not null
 )
+drop table sesion
 
 create table acceso(
 fecha date primary key,
 usuario varchar(30) not null,
 foreign key (usuario) references sesion(Usuario)
 )
+drop table acceso
 -----------------------------------------
 create table Tramite(
 nombre varchar(100) primary key,
@@ -117,7 +130,7 @@ clente varchar(100) not null,
 foreign key (idapv) references Asesor(idapv),
 foreign key (vin) references Vin(vin)
 )
-
+drop table Venta
 
 --Inserts sesion
 insert sesion values('juan','1234','Administrador')
@@ -142,3 +155,4 @@ select * from sesion where usuario='juan' and contraseña='1234'
 select * from Vin
 
 select * from Asesor
+select * from sesion

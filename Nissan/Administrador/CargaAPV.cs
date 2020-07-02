@@ -34,7 +34,7 @@ namespace Nissan.Administrador
                 {
                     label1.Text = openFileDialog.FileName;
                     //textBox1.Text = openFileDialog.FileName;
-                   
+
                     using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
                     {
                         using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
@@ -59,31 +59,31 @@ namespace Nissan.Administrador
             panel5.Visible = true;
             label1.Visible = true;
 
-           
-            
+
+
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[comboBox1.SelectedItem.ToString()];
             dataGridView1.DataSource = dt;
-            
-            if (dt !=null)
-            if (dt != null)
-            {
-                List<Asesor> asesores = new List<Asesor>();
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    Asesor asesor = new Asesor();
-                    asesor.nombres = dt.Rows[i]["nombres"].ToString();
-                    asesor.agente = dt.Rows[i]["agente"].ToString();
 
-                    asesores.Add(asesor);
-                }
+            if (dt != null)
+                if (dt != null)
+                {
+                    List<Asesor> asesores = new List<Asesor>();
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        Asesor asesor = new Asesor();
+                        asesor.nombres = dt.Rows[i]["nombres"].ToString();
+                        asesor.agente = dt.Rows[i]["agente"].ToString();
+
+                        asesores.Add(asesor);
+                    }
                     asesorBindingSource.DataSource = asesores;
-                
-              
-            }
+
+
+                }
 
             button2.Visible = true;
         }
@@ -97,37 +97,93 @@ namespace Nissan.Administrador
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Nissan.Base_de_datos.Conexion conexion = new Base_de_datos.Conexion();
+
+            SqlConnection Conect = new SqlConnection("Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True");
+
+            SqlCommand agregar = new SqlCommand("insert into Asesor values(@idapv,@nombres,@contraseña,@roles)",Conect);
+            SqlCommand agregar2 = new SqlCommand("insert into sesion values(@usuario,@contraseña,@roles)", Conect);
+            Conect.Open();
+
             try
             {
-                Nissan.Base_de_datos.Conexion Conect = new Base_de_datos.Conexion();
-                //string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
-                // string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
-                DapperPlusManager.Entity<Asesor>().Table("Asesor");
-                List<Asesor> asesores = asesorBindingSource.DataSource as List<Asesor>;
-                if (asesores != null)
+                foreach(DataGridViewRow row in dataGridView1.Rows)
                 {
-                    using (IDbConnection db = new SqlConnection(Conect.Conect))
-                    {
-                        db.BulkInsert(asesores);
-                    }
-                }
-                MessageBox.Show("Inserción Correcta");
-                panel5.Visible = false;
-                label1.Text = "";
-                label1.Visible = false;
-                button2.Visible = false;
-                dataGridView1.Columns.Clear();
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+                    agregar.Parameters.Clear();
+                    agregar2.Parameters.Clear();
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+                    agregar.Parameters.AddWithValue("@nombres", Convert.ToString(row.Cells["nombres"].Value));
+                    agregar.Parameters.AddWithValue("@idapv", Convert.ToString(row.Cells["agente"].Value));
+                    agregar.Parameters.AddWithValue("@contraseña", Convert.ToString("1234"));
+                    agregar.Parameters.AddWithValue("@roles", Convert.ToString("apv"));
+                    
+
+                    
+                    agregar2.Parameters.AddWithValue("@usuario", Convert.ToString(row.Cells["nombres"].Value));
+                    agregar2.Parameters.AddWithValue("@contraseña", Convert.ToString("1234"));
+                    agregar2.Parameters.AddWithValue("@roles", Convert.ToString("apv"));
+
+                    agregar.ExecuteNonQuery();
+                    agregar2.ExecuteNonQuery();
+
+                }
+                MessageBox.Show("Datos Agregados");
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error al agregar");
+            }
+            finally
+            {
+                Conect.Close();
+            }
+
+
+          /*  DataSet ds = new DataSet();
+            dataGridView1.DataSource = geishaDataSet.Tables[0];
+            
+            //string Conect = "Data Source=Localhost; Initial Catalog=Geisha; Integrated Security=True";
+            // string connectionString = "Server=.;Database=Geisha;User=sa;Password=1234";
+            SqlConnection conexion_destino = new SqlConnection();
+
+            conexion_destino.ConnectionString = "Data Source=.;Initial Catalog=Geisha; Integrated Security =true";
+            conexion_destino.Open();
+            SqlBulkCopy importar = default(SqlBulkCopy);
+            importar = new SqlBulkCopy(conexion_destino);
+            importar.DestinationTableName = "Asesor";
+            importar.WriteToServer(geishaDataSet.Tables[0]);
+            conexion_destino.Close();*/
+
+
+
+            /*
+             * try
         {
+        .Entity<Asesor>().Table("Asesor");
+            List<Asesor> asesores = asesorBindingSource.DataSource as List<Asesor>;
+            if (asesores != null)
+            {
+                using (IDbConnection db = new SqlConnection(Conect.Conect))
+                {
+                    db.BulkInsert(asesores);
+                }
+            }
+            MessageBox.Show("Inserción Correcta");
+            panel5.Visible = false;
+            label1.Text = "";
+            label1.Visible = false;
+            button2.Visible = false;
+            dataGridView1.Columns.Clear();
+
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }*/
+
+
 
         }
     }
 }
+

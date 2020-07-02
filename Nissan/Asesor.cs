@@ -10,6 +10,8 @@ namespace Nissan
     {
         public String nombres { get; set;}
         public String agente { get; set; }
+        public String contraseña { get; set; }
+        public String roles { get; set; }
 
-     }
+    }
 }
